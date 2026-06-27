@@ -290,6 +290,7 @@ body {
     letter-spacing: -0.02em;
     background: linear-gradient(to right, var(--accent-primary), var(--accent-secondary));
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
     margin-bottom: 1.5rem;
 }
@@ -328,4 +329,410 @@ body {
     .nav-links { display: none; }
     .hero-cta-group { flex-direction: column; width: 100%; max-width: 300px; }
     .btn { width: 100%; justify-content: center; }
+}
+
+/* --- Dashboard & Telemetry Section --- */
+.dashboard-section {
+    padding: 6rem 1.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section-header {
+    margin-bottom: 3rem;
+    text-align: left;
+}
+
+.section-title {
+    font-size: 2rem;
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    margin-bottom: 0.5rem;
+}
+
+.section-subtitle {
+    color: var(--text-secondary);
+    font-size: 1rem;
+}
+
+/* --- Metrics Grid Structure --- */
+.metrics-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 4rem;
+}
+
+.metric-card {
+    background-color: var(--bg-surface);
+    border: 1px solid var(--border-color);
+    padding: 1.5rem;
+    border-radius: 1rem;
+    position: relative;
+    overflow: hidden;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.metric-card:hover {
+    transform: translateY(-2px);
+    border-color: var(--accent-primary);
+}
+
+.metric-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.metric-label {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: var(--text-secondary);
+}
+
+.metric-icon {
+    width: 18px;
+    height: 18px;
+    color: var(--accent-secondary);
+}
+
+.metric-value {
+    font-size: 2.25rem;
+    font-weight: 750;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.5rem;
+}
+
+.metric-footer {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+}
+
+/* --- Repository Grid & Showcase --- */
+.repo-explorer-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 0.75rem;
+}
+
+.sync-timestamp {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+}
+
+.repo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 1.5rem;
+}
+
+.repo-card {
+    background: linear-gradient(135deg, var(--bg-surface), rgba(20, 20, 25, 0.4));
+    border: 1px solid var(--border-color);
+    border-radius: 1rem;
+    padding: 1.75rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 180px;
+    transition: all 0.2s ease;
+}
+
+.repo-card:hover {
+    border-color: var(--accent-secondary);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+.repo-name {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    text-decoration: none;
+    margin-bottom: 0.5rem;
+    display: inline-block;
+}
+
+.repo-description {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    line-height: 1.5;
+    margin-bottom: 1.5rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.repo-meta-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.repo-lang {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+.lang-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: var(--accent-primary);
+}
+
+.repo-stats-aside {
+    display: flex;
+    gap: 1rem;
+    font-size: 0.8rem;
+    color: var(--text-muted);
+}
+
+.repo-stats-aside span {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+}
+
+/* --- Skeleton Loaders --- */
+.skeleton-card {
+    height: 180px;
+    background: linear-gradient(90deg, var(--bg-surface) 25%, var(--border-color) 50%, var(--bg-surface) 75%);
+    background-size: 200% 100%;
+    animation: loadingShimmer 1.5s infinite linear;
+    border-radius: 1rem;
+    border: 1px solid var(--border-color);
+}
+
+@keyframes loadingShimmer {
+    0% { background-position: 200% 0; }
+    100% { background-position: -200% 0; }
+}
+
+/* --- Phase 3 Sections Shared Layout --- */
+.projects-section, .skills-section, .timeline-section {
+    padding: 6rem 1.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* --- Project Showcase Cards --- */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    gap: 2rem;
+}
+
+.portfolio-card {
+    background-color: var(--bg-surface);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 2rem;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.3s cubic-bezier(0.2, 0.8, 0.2, 1), border-color 0.3s ease;
+}
+
+.portfolio-card:hover {
+    transform: translateY(-4px);
+    border-color: var(--accent-primary);
+}
+
+.proj-badge {
+    align-self: flex-start;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    background: rgba(168, 85, 247, 0.1);
+    color: var(--accent-primary);
+    padding: 0.25rem 0.75rem;
+    border-radius: 4px;
+    margin-bottom: 1.25rem;
+}
+
+.proj-badge.ai {
+    background: rgba(59, 130, 246, 0.1);
+    color: var(--accent-secondary);
+}
+
+.portfolio-card h3 {
+    font-size: 1.35rem;
+    font-weight: 750;
+    margin-bottom: 0.75rem;
+}
+
+.portfolio-card p {
+    color: var(--text-secondary);
+    font-size: 0.925rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.tech-tag-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 2rem;
+}
+
+.tech-tag {
+    font-size: 0.8rem;
+    background-color: var(--bg-main);
+    border: 1px solid var(--border-color);
+    padding: 0.2rem 0.6rem;
+    border-radius: 6px;
+    color: var(--text-secondary);
+}
+
+.proj-links {
+    display: flex;
+    gap: 1.25rem;
+}
+
+.proj-links a {
+    color: var(--text-primary);
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+}
+
+.proj-links a:hover {
+    color: var(--accent-secondary);
+}
+
+/* --- Interactive Skills Progress Matrix --- */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2.5rem;
+}
+
+.skill-category-card {
+    background: var(--bg-surface);
+    border: 1px solid var(--border-color);
+    padding: 2rem;
+    border-radius: 12px;
+}
+
+.skill-category-card h3 {
+    font-size: 1.15rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 0.5rem;
+}
+
+.skill-bar-container {
+    margin-bottom: 1.25rem;
+}
+
+.skill-info {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.875rem;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+}
+
+.skill-track {
+    height: 6px;
+    background-color: var(--bg-main);
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.skill-fill {
+    height: 100%;
+    background: linear-gradient(to right, var(--accent-secondary), var(--accent-primary));
+    width: 0%; /* Dynamic fill hook */
+    transition: width 1.5s cubic-bezier(0.1, 0.8, 0.1, 1);
+}
+
+/* --- Architectural Vertical Timeline --- */
+.timeline-container {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+    padding-left: 2.5rem;
+}
+
+.timeline-container::before {
+    content: '';
+    position: absolute;
+    left: 7px;
+    top: 5px;
+    bottom: 5px;
+    width: 2px;
+    background-color: var(--border-color);
+}
+
+.timeline-node {
+    position: relative;
+    margin-bottom: 3.5rem;
+}
+
+.timeline-node::before {
+    content: '';
+    position: absolute;
+    left: -2.5rem;
+    top: 6px;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: var(--bg-main);
+    border: 3px solid var(--accent-primary);
+    z-index: 2;
+}
+
+.timeline-time {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--accent-secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+.timeline-body {
+    background-color: var(--bg-surface);
+    border: 1px solid var(--border-color);
+    padding: 1.75rem;
+    border-radius: 10px;
+}
+
+.timeline-body h3 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 0.25rem;
+}
+
+.timeline-institution {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    margin-bottom: 1rem;
+    font-weight: 500;
+}
+
+.timeline-desc {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    line-height: 1.5;
 }
