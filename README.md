@@ -31,7 +31,9 @@
 
 <div align="center">
 <a href="https://Vaishnav0299.github.io/Vaishnav0299/">
-  ![Launch Live Site](https://img.shields.io/badge/%E2%96%B6_LAUNCH_DEVELOPER_OS-🚀-6366f1?style=flat-square&logo=virtualbox&logoColor=white)
+  <span style="background:#1e1e2f; color:#fff; padding:10px 20px; border-radius:50px; font-family:sans-serif; font-weight:bold; font-size:14px; border: 2px solid #6366f1;">
+    ▶ LAUNCH DEVELOPER OS 🚀
+  </span>
 </a>
 </div>
 <br />
