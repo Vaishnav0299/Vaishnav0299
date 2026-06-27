@@ -3,10 +3,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const roadmapData = [
         {
-            time: "2025 - Present",
+            time: "2026 - Present",
+            title: "AI Engineer & Technical Builder",
+            inst: "LiftUpLabs",
+            desc: "Architecting microservices pipelines, setting up specialized workflow routines for startup deployment structures, and implementing predictive semantic caching configurations."
+        },
+        {
+            time: "2025",
             title: "AI Engineer & Technical Builder",
             inst: "Autonomous Operations & Open Source Ecosystems",
-            desc: "Architecting microservices pipelines, setting up specialized workflow routines for startup deployment structures, and implementing predictive semantic caching configurations."
+            desc: "Designed specialized workflow routines and microservices pipelines for startup deployment structures."
         },
         {
             time: "2024",
