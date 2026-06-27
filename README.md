@@ -29,7 +29,7 @@
 ┌────────────────────────────────────────────────────────────────────────┐
 │  FRONTEND  │ React.js 🌟 Next.js 🌟 Tailwind CSS 🌟 HTML5/CSS3          │
 ├────────────┼───────────────────────────────────────────────────────────┤
-│  BACKEND   │ Node.js 🚀 Express 🚀 MongoDB 🚀 PostgreSQL               │
+│  BACKEND   │ Node.js 🚀 Express 🚀 MongoDB 🚀 PostgreSQL                │
 ├────────────┼───────────────────────────────────────────────────────────┤
 │     AI     │ Python 🤖 TensorFlow 🤖 LangChain 🤖 Agentic Frameworks    │
 ├────────────┼───────────────────────────────────────────────────────────┤
