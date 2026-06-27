@@ -32,3 +32,12 @@
 | **AI / ML** | ![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white) ![TensorFlow](https://img.shields.io/badge/TensorFlow-FF6F00?style=flat-square&logo=tensorflow&logoColor=white) ![LangChain](https://img.shields.io/badge/LangChain-00AD88?style=flat-square&logo=langchain&logoColor=white) |
 | **DATA SCIENCE** | ![Pandas](https://img.shields.io/badge/Pandas-150458?style=flat-square&logo=pandas&logoColor=white) ![NumPy](https://img.shields.io/badge/NumPy-013243?style=flat-square&logo=numpy&logoColor=white) ![Scikit-learn](https://img.shields.io/badge/scikit--learn-F7931E?style=flat-square&logo=scikitlearn&logoColor=white) ![Matplotlib](https://img.shields.io/badge/Matplotlib-11557C?style=flat-square&logo=matplotlib&logoColor=white) ![Jupyter](https://img.shields.io/badge/Jupyter-F37626?style=flat-square&logo=jupyter&logoColor=white) |
 | **DEVOPS** | ![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white) ![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-2088FF?style=flat-square&logo=githubactions&logoColor=white) ![Linux](https://img.shields.io/badge/Linux-FCC624?style=flat-square&logo=linux&logoColor=black) ![AWS](https://img.shields.io/badge/AWS-232F3E?style=flat-square&logo=amazonaws&logoColor=white) |
+
+---
+
+### 📊 Git Telemetry & Most Used Languages
+
+<div align="center">
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Vaishnav0299&layout=compact&theme=transparent&hide_border=true&title_color=a855f7&text_color=a1a1aa&icon_color=3b82f6" alt="Most Used Languages" />
+  <img src="https://github-readme-stats.vercel.app/api?username=Vaishnav0299&show_icons=true&theme=transparent&hide_border=true&title_color=a855f7&text_color=a1a1aa&icon_color=3b82f6" alt="GitHub Stats" />
+</div>
