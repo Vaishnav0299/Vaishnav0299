@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const roadmapData = [
         {
             time: "2026",
-            title: "AI Engineer & Technical Builder",
+            title: "Full-Stack Developer & AI Engineer",
             inst: "LiftUpLabs",
             desc: "Architecting microservices pipelines, setting up specialized workflow routines for startup deployment structures, and implementing predictive semantic caching configurations."
         },
@@ -38,8 +38,6 @@ document.addEventListener('DOMContentLoaded', () => {
             </div>
         </div>
     `).join('');
-
-    // Re-initialize Lucide Icons across all combined modules
     if (typeof lucide !== 'undefined') {
         lucide.createIcons();
     }
