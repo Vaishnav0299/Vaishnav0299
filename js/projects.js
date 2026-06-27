@@ -46,13 +46,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 <span class="proj-badge ${proj.badgeClass}">${proj.type}</span>
                 <h3>${proj.name}</h3>
                 <p>${proj.desc}</p>
-                <div class="tech-tag-wrap">
+                <div class="tech-tag-wrap" style="margin-bottom: 0;">
                     ${proj.stack.map(tag => `<span class="tech-tag">${tag}</span>`).join('')}
                 </div>
-            </div>
-            <div class="proj-links">
-                <a href="${proj.github}" target="_blank"><i data-lucide="github" style="width:16px;"></i> Codebase</a>
-                <a href="${proj.live}"><i data-lucide="external-link" style="width:16px;"></i> Live Build</a>
             </div>
         </div>
     `).join('');
