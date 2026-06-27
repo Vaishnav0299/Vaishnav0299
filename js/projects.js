@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
     
     const curatedProjects = [
         {
-            name: "Enterprise ERP Management System",
+            name: "Enterprise Management System",
             type: "Full Stack",
             badgeClass: "",
             desc: "A production-grade enterprise operational architecture featuring automated internal attendance verification pipelines, dynamic payload mechanics for payroll processing, and cross-modular analytics pipelines.",

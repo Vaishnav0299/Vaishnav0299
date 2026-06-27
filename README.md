@@ -2,7 +2,7 @@
 
 <div align="center">
   <img src="https://img.shields.io/badge/SYSTEM_STATUS-%E2%9A%99%EF%B8%8F_CORE_OS_NOMINAL-6366f1?style=for-the-badge&logo=ubuntu&logoColor=fff" alt="System Status" />
-  <img src="https://img.shields.io/badge/CURRENT_FOCUS-%F0%9F%9F%A2_BUILDING_ERP_MODULES-a855f7?style=for-the-badge" alt="Current Focus" />
+  <img src="https://img.shields.io/badge/CURRENT_FOCUS-%F0%9F%9F%A2_BUILDING_NEXT_GEN_SYSTEMS-a855f7?style=for-the-badge" alt="Current Focus" />
   
   <br />
   <br />
