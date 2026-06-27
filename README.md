@@ -1,4 +1,4 @@
-<div align="center" style="font-size: 150%>👋 Hey, I'm Vaishnav Gaware </div>
+<div align="center"><h1>👋 Hey, I'm Vaishnav Gaware </h1></div>
 
 <div align="center">
   <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=24&pause=1000&color=a855f7&center=true&vCenter=true&width=900&lines=AI+%26+Data+Science+Undergraduate;Full+Stack+AI+Developer;Machine+Learning+Enthusiast;Building+Scalable+Applications;Open+Source+Contributor" alt="Typing SVG" />
