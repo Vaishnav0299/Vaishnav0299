@@ -28,10 +28,11 @@
 <br />
 <br />
 
+<div align="center">
 <a href="https://Vaishnav0299.github.io/Vaishnav0299/">
   <img src="https://img.shields.io/badge/%E2%96%B6_LAUNCH_DEVELOPER_OS-🚀-6366f1?style=for-the-badge&logo=virtualbox&logoColor=white" alt="Launch Live Site" height="45"/>
 </a>
-
+</div>
 <br />
 <br />
 
