@@ -1,13 +1,16 @@
 # 🪐 Vaishnav Gaware | Vaishnav0299
+
+<div align="center">
+  <img src="https://img.shields.io/badge/SYSTEM_STATUS-%E2%9A%99%EF%B8%8F_CORE_OS_NOMINAL-6366f1?style=for-the-badge&logo=ubuntu&logoColor=fff" alt="System Status" />
+  <img src="https://img.shields.io/badge/CURRENT_FOCUS-%F0%9F%9F%A2_BUILDING_NEXT_GEN_SYSTEMS-a855f7?style=for-the-badge" alt="Current Focus" />
+  
 ### 👤 Brief Introduction
 
 I am an **AI Engineer, Full-Stack Developer, and Research Scholar in Computer Science** based in Pune, India. I specialize in designing autonomous workflow pipelines, building scalable full-stack architectures (React, Node.js, Hono, PostgreSQL), and developing predictive machine learning models. 
 
 Connect with me on [LinkedIn](https://www.linkedin.com/in/vaishnav-gaware-107799315/) to collaborate on AI systems engineering, data science, and cloud automation.
 
----<div align="center">
-  <img src="https://img.shields.io/badge/SYSTEM_STATUS-%E2%9A%99%EF%B8%8F_CORE_OS_NOMINAL-6366f1?style=for-the-badge&logo=ubuntu&logoColor=fff" alt="System Status" />
-  <img src="https://img.shields.io/badge/CURRENT_FOCUS-%F0%9F%9F%A2_BUILDING_NEXT_GEN_SYSTEMS-a855f7?style=for-the-badge" alt="Current Focus" />
+---
   
   <br />
   <br />
