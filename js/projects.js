@@ -28,6 +28,15 @@ document.addEventListener('DOMContentLoaded', () => {
             stack: ["LangChain", "Ollama", "Python", "ChromaDB"],
             github: "https://github.com/Vaishnav0299",
             live: "#"
+        },
+        {
+            name: "Predictive Churn Analytics Pipeline",
+            type: "Data Science",
+            badgeClass: "ai",
+            desc: "Designed and implemented an end-to-end data intelligence and modeling pipeline that ingests customer telemetry, performs statistical EDA, and deploys a classification model for churn prediction.",
+            stack: ["Python", "Pandas", "Scikit-Learn", "Matplotlib", "Jupyter"],
+            github: "https://github.com/Vaishnav0299",
+            live: "#"
         }
     ];
 

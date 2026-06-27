@@ -38,6 +38,11 @@
 ### 📊 Git Telemetry & Most Used Languages
 
 <div align="center">
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=Vaishnav0299&bg_color=00000000&color=a855f7&line=3b82f6&point=a855f7&area=true&hide_border=true" alt="Commit Activity Graph" width="100%" />
+  
+  <br />
+  <br />
+  
   <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Vaishnav0299&layout=compact&theme=transparent&hide_border=true&title_color=a855f7&text_color=a1a1aa&icon_color=3b82f6" alt="Most Used Languages" />
   <img src="https://github-readme-stats.vercel.app/api?username=Vaishnav0299&show_icons=true&theme=transparent&hide_border=true&title_color=a855f7&text_color=a1a1aa&icon_color=3b82f6" alt="GitHub Stats" />
 </div>
