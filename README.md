@@ -1,22 +1,37 @@
-# ⚡ Vaishnav0299 // Developer Ecosystem OS
+# 🪐 USERNAME_NODE // Vaishnav0299
 
 <div align="center">
-  <img src="https://komarev.com/ghpvc/?username=Vaishnav0299&color=6366f1&style=flat-square&label=SYSTEM+ACCESSED" alt="Profile Views" />
-  <br />
-  <h3>⚡ Systems Engineer & Full-Stack Developer ⚡</h3>
-  <p>Building low-latency architectures, automated pipelines, and highly interactive user interfaces.</p>
+  <img src="https://img.shields.io/badge/SYSTEM_STATUS-%E2%9A%99%EF%B8%8F_CORE_OS_NOMINAL-6366f1?style=for-the-badge&logo=ubuntu&logoColor=fff" alt="System Status" />
+  <img src="https://img.shields.io/badge/CURRENT_FOCUS-%F0%9F%9F%A2_BUILDING_ERP_MODULES-a855f7?style=for-the-badge" alt="Current Focus" />
   
-  <!-- CRITICAL ENTRY POINT LINKING TO YOUR LIVE APP -->
+  <br />
+  <br />
+  
+  <h1>🛰️ ARCHITECTURAL INTERFACE PORTAL</h1>
+  <p><strong>AI Engineer • Full-Stack Developer • Systems Automator</strong></p>
+
+  <br />
+
   <a href="https://Vaishnav0299.github.io/Vaishnav0299/">
-    <img src="https://img.shields.io/badge/LAUNCH_DEVELOPER_OS-6366F1?style=for-the-badge&logo=virtualbox&logoColor=white" alt="Launch Live Site" />
+    <img src="https://img.shields.io/badge/%E2%96%B6_LAUNCH_DEVELOPER_OS-🚀-6366f1?style=for-the-badge&logo=virtualbox&logoColor=white" alt="Launch Live Site" height="45"/>
   </a>
+
+  <br />
+  <br />
+  <p><i>Click the interface control above to initialize the live animated telemetry desktop app.</i></p>
 </div>
 
 ---
 
-### 🖥️ Core Tech Stack Execution Matrix
+### 🛠️ Core Technology Execution Matrix
 
 ```text
-[Frontend Environments]  ──► HTML5  │ CSS3 (Flexbox/Grid) │ JavaScript (ES6+)
-[Automation & Systems]   ──► GitHub Actions │ API Architectures │ JSON Telemetry Pipelines
-[Development Tools]      ──► Git │ Linux Environments │ Bash Scripting
+┌────────────────────────────────────────────────────────────────────────┐
+│  FRONTEND  │ React.js 🌟 Next.js 🌟 Tailwind CSS 🌟 HTML5/CSS3          │
+├────────────┼───────────────────────────────────────────────────────────┤
+│  BACKEND   │ Node.js 🚀 Express 🚀 MongoDB 🚀 PostgreSQL               │
+├────────────┼───────────────────────────────────────────────────────────┤
+│     AI     │ Python 🤖 TensorFlow 🤖 LangChain 🤖 Agentic Frameworks    │
+├────────────┼───────────────────────────────────────────────────────────┤
+│   DEVOPS   │ Docker 🐳 GitHub Actions 🐳 Linux Automation 🐳 AWS        │
+└────────────────────────────────────────────────────────────────────────┘
