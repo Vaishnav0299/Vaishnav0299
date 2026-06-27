@@ -18,7 +18,7 @@
 
   <br />
   <br />
-  <p><i>Click the interface control above to initialize the live animated telemetry desktop app.</i></p>
+  <p>Launch Live Site ──► <a href="https://Vaishnav0299.github.io/Vaishnav0299/"><b>[Click Here]</b></a></p>
 </div>
 
 ---
