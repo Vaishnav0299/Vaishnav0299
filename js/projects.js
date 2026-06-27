@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
             badgeClass: "",
             desc: "A production-grade enterprise operational architecture featuring automated internal attendance verification pipelines, dynamic payload mechanics for payroll processing, and cross-modular analytics pipelines.",
             stack: ["Node.js", "React", "MongoDB", "Express"],
-            github: "https://github.com/vaishnavgaware",
+            github: "https://github.com/Vaishnav0299",
             live: "#"
         },
         {
@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
             badgeClass: "ai",
             desc: "Designed and engineered an orchestrator that pulls text prompt tokens and maps them directly to high-density vector-generative imagery algorithms for asset compilation.",
             stack: ["Python", "TensorFlow", "OpenAI API", "Docker"],
-            github: "https://github.com/vaishnavgaware",
+            github: "https://github.com/Vaishnav0299",
             live: "#"
         },
         {
@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
             badgeClass: "ai",
             desc: "An enterprise intelligence tool mapping localized text corpuses to relational spatial data matrices using vector embeddings for low-latency contextual semantic lookup.",
             stack: ["LangChain", "Ollama", "Python", "ChromaDB"],
-            github: "https://github.com/vaishnavgaware",
+            github: "https://github.com/Vaishnav0299",
             live: "#"
         }
     ];
