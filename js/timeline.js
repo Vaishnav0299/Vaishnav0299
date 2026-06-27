@@ -3,28 +3,28 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const roadmapData = [
         {
-            time: "2026 - Present",
+            time: "2026",
             title: "AI Engineer & Technical Builder",
             inst: "LiftUpLabs",
             desc: "Architecting microservices pipelines, setting up specialized workflow routines for startup deployment structures, and implementing predictive semantic caching configurations."
         },
         {
             time: "2025",
-            title: "AI Engineer & Technical Builder",
-            inst: "Autonomous Operations & Open Source Ecosystems",
-            desc: "Designed specialized workflow routines and microservices pipelines for startup deployment structures."
+            title: "Open Source & AI Orchestration",
+            inst: "Independent Development",
+            desc: "Immersed in agentic AI frameworks, LangChain, and vector databases. Contributed to open-source repos, built custom local desktop modules, and developed end-to-end automation pipelines as part of self-directed technical growth."
         },
         {
             time: "2024",
-            title: "Full-Stack System Developer",
-            inst: "LiftUpLabs",
-            desc: "Designed and engineered corporate internal resource systems, integrating secure attendance validation parameters and dynamic analytics processing suites."
+            title: "Full-Stack Foundations & Engineering",
+            inst: "Personal Growth & Self-Learning",
+            desc: "Mastered full-stack development patterns (React, Node.js, databases). Created initial web interfaces, studied system design fundamentals, and built independent tools to solidify software engineering basics."
         },
         {
             time: "2023",
-            title: "Core Programming Foundations",
-            inst: "Academic Track Integration",
-            desc: "Mastering core algorithmic computational systems, database optimization routines, and engineering standard design patterns."
+            title: "Algorithmic & Coding Basics",
+            inst: "Academic & Personal Growth",
+            desc: "Focused on core data structures, algorithms, and object-oriented design. Built small utility scripts and focused on writing clean, structured code as a foundation."
         }
     ];
 
