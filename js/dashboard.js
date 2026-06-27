@@ -1,63 +1,46 @@
-/**
- * Developer OS - Core Controller Interface
- * Maps out ingested structured pipelines right into standard interface components.
- */
 document.addEventListener('DOMContentLoaded', async () => {
-    // Replace with your GitHub username profile identifier
     const GITHUB_TARGET_ID = "vaishnavgaware"; 
     
     const engine = new GitHubAPIEngine(GITHUB_TARGET_ID);
     
-    // Core Layout Hook Elements
     const repoContainer = document.getElementById('repo-showcase-container');
     const syncLabel = document.getElementById('sync-time');
     
-    // UI Metric Dynamic Nodes
     const repoCountNode = document.querySelector('#metric-repos .metric-value');
     const starCountNode = document.querySelector('#metric-stars .metric-value');
     const followerCountNode = document.querySelector('#metric-followers .metric-value');
     const gistCountNode = document.querySelector('#metric-gists .metric-value');
 
-    // Trigger explicit async processing threads
-    const [profileData, repoData] = await Promise.all([
-        engine.fetchProfileMetrics(),
-        engine.fetchRepositoryTelemetry()
-    ]);
+    // Request ingestion data from our hybrid model provider
+    const dataset = await engine.getTelemetryPayload();
 
-    // Bind Ingested User Profile Telemetry Elements
-    if (profileData) {
-        repoCountNode.textContent = profileData.public_repos || 0;
-        followerCountNode.textContent = profileData.followers || 0;
-        gistCountNode.textContent = profileData.public_gists || 0;
-        syncLabel.textContent = "Live Stream Synced Status Verified";
-    } else {
-        syncLabel.textContent = "Offline Fallback Cache Initialized";
-    }
+    if (dataset && dataset.profile && dataset.repos) {
+        const profile = dataset.profile;
+        const repos = dataset.repos;
 
-    // Process and Calculate Aggregated Star Metrics
-    if (repoData && repoData.length > 0) {
-        const totalCalculatedStars = repoData.reduce((acc, currentRepo) => {
-            return acc + (currentRepo.stargazers_count || 0);
-        }, 0);
-        
+        // Map user profile elements
+        repoCountNode.textContent = profile.public_repos || 0;
+        followerCountNode.textContent = profile.followers || 0;
+        gistCountNode.textContent = profile.public_gists || 0;
+
+        // Calculate aggregate community stars
+        const totalCalculatedStars = repos.reduce((acc, cr) => acc + (cr.stargazers_count || 0), 0);
         starCountNode.textContent = totalCalculatedStars;
 
-        // Strip skeletons out and populate workspace cards
+        // Process Synchronization Date Label
+        const formattedDate = new Date(dataset.compiledAt * 1000).toLocaleString();
+        syncLabel.textContent = `Sync: ${formattedDate}`;
+
+        // Clear layout skeletons and build repo cards
         repoContainer.innerHTML = '';
+        const eliteSelection = repos.slice(0, 6);
 
-        // Slice array down to top 6 prominent codebases
-        const displaySelection = repoData.slice(0, 6);
-
-        displaySelection.forEach(repo => {
+        eliteSelection.forEach(repo => {
             const projectCardMarkup = `
                 <div class="repo-card">
                     <div>
-                        <a href="${repo.html_url}" target="_blank" class="repo-name">
-                            ${repo.name}
-                        </a>
-                        <p class="repo-description">
-                            ${repo.description || "System engineering parameters specified. Code module development remains open source."}
-                        </p>
+                        <a href="${repo.html_url}" target="_blank" class="repo-name">${repo.name}</a>
+                        <p class="repo-description">${repo.description || "System engineering parameters specified. Open source module development execution ongoing."}</p>
                     </div>
                     <div class="repo-meta-footer">
                         <div class="repo-lang">
@@ -74,11 +57,11 @@ document.addEventListener('DOMContentLoaded', async () => {
             repoContainer.insertAdjacentHTML('beforeend', projectCardMarkup);
         });
 
-        // Force rebuild Lucide instance node allocations to catch new dynamic elements
         if (typeof lucide !== 'undefined') {
             lucide.createIcons();
         }
     } else {
-        repoContainer.innerHTML = `<p style="grid-column: 1/-1; text-align:center; color: var(--text-muted);">Failed to pull real-time repositories. Check network configuration connectivity parameters.</p>`;
+        syncLabel.textContent = "Pipeline Error Detected";
+        repoContainer.innerHTML = `<p style="grid-column: 1/-1; text-align:center; color: var(--text-muted);">Pipeline telemetry extraction error. Verify configuration files parameters.</p>`;
     }
 });

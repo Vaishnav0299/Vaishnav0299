@@ -736,3 +736,110 @@ body {
     font-size: 0.9rem;
     line-height: 1.5;
 }
+
+/* --- Phase 5 System Terminal & Smooth Interactive Polish --- */
+.terminal-section {
+    padding: 6rem 1.5rem 8rem 1.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.terminal-mock {
+    background-color: #09090b;
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+    overflow: hidden;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+[data-theme="light"] .terminal-mock {
+    background-color: #18181b;
+    color: #f4f4f5;
+}
+
+.terminal-titlebar {
+    background-color: rgba(24, 24, 27, 0.8);
+    padding: 0.75rem 1.25rem;
+    border-bottom: 1px solid var(--border-color);
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.terminal-dots {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.terminal-dots .dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.terminal-dots .red { background-color: #ef4444; }
+.terminal-dots .yellow { background-color: #eab308; }
+.terminal-dots .green { background-color: #22c55e; }
+
+.terminal-title-text {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 0.8rem;
+    color: var(--text-muted);
+}
+
+.terminal-body {
+    padding: 1.5rem;
+    min-height: 220px;
+    max-height: 400px;
+    overflow-y: auto;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: #a1a1aa;
+}
+
+.log-line {
+    margin-bottom: 0.5rem;
+    opacity: 0;
+    transform: translateY(4px);
+    animation: printLine 0.4s forwards ease-out;
+}
+
+.log-line.text-accent {
+    color: var(--accent-primary);
+    font-weight: 600;
+}
+
+@keyframes printLine {
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Scrollbar Customization */
+.terminal-body::-webkit-scrollbar {
+    width: 6px;
+}
+.terminal-body::-webkit-scrollbar-thumb {
+    background-color: var(--border-color);
+    border-radius: 3px;
+}
+
+/* Active Highlight Tracking for Links */
+.nav-links a {
+    position: relative;
+}
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(to right, var(--accent-primary), var(--accent-secondary));
+    transition: width 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+.nav-links a.active::after {
+    width: 100%;
+}
