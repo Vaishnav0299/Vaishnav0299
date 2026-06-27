@@ -1,6 +1,6 @@
+<div align="center">
 # 🪐 Vaishnav Gaware | Vaishnav0299
 
-<div align="center">
   <img src="https://img.shields.io/badge/SYSTEM_STATUS-%E2%9A%99%EF%B8%8F_CORE_OS_NOMINAL-6366f1?style=for-the-badge&logo=ubuntu&logoColor=fff" alt="System Status" />
   <img src="https://img.shields.io/badge/CURRENT_FOCUS-%F0%9F%9F%A2_BUILDING_NEXT_GEN_SYSTEMS-a855f7?style=for-the-badge" alt="Current Focus" />
   
@@ -10,8 +10,6 @@ I am an **AI Engineer, Full-Stack Developer, and Research Scholar in Computer Sc
 
 Connect with me on [LinkedIn](https://www.linkedin.com/in/vaishnav-gaware-107799315/) to collaborate on AI systems engineering, data science, and cloud automation.
 
----
-  
   <br />
   <br />
   
@@ -26,7 +24,7 @@ Connect with me on [LinkedIn](https://www.linkedin.com/in/vaishnav-gaware-107799
 
   <br />
   <br />
-</div>
+
 
 ---
 ### 🛠️ Core Technology Execution Matrix
@@ -39,6 +37,7 @@ Connect with me on [LinkedIn](https://www.linkedin.com/in/vaishnav-gaware-107799
 | **DATA SCIENCE** | ![Pandas](https://img.shields.io/badge/Pandas-150458?style=flat-square&logo=pandas&logoColor=white) ![NumPy](https://img.shields.io/badge/NumPy-013243?style=flat-square&logo=numpy&logoColor=white) ![Scikit-learn](https://img.shields.io/badge/scikit--learn-F7931E?style=flat-square&logo=scikitlearn&logoColor=white) ![Matplotlib](https://img.shields.io/badge/Matplotlib-11557C?style=flat-square&logo=matplotlib&logoColor=white) ![Jupyter](https://img.shields.io/badge/Jupyter-F37626?style=flat-square&logo=jupyter&logoColor=white) |
 | **DEVOPS** | ![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white) ![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-2088FF?style=flat-square&logo=githubactions&logoColor=white) ![Linux](https://img.shields.io/badge/Linux-FCC624?style=flat-square&logo=linux&logoColor=black) ![AWS](https://img.shields.io/badge/AWS-232F3E?style=flat-square&logo=amazonaws&logoColor=white) |
 
+</div>
 
 
 
