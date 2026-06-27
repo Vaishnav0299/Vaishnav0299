@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
             type: "Full Stack",
             badgeClass: "",
             desc: "A production-grade enterprise operational architecture featuring automated internal attendance verification pipelines, dynamic payload mechanics for payroll processing, and cross-modular analytics pipelines.",
-            stack: ["Node.js", "React", "MongoDB", "Express"],
+            stack: ["Node.js", "React", "PostgreSQL", "Hono"],
             github: "https://github.com/Vaishnav0299",
             live: "#"
         },

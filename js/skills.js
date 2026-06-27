@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
         },
         {
             category: "Backend & Systems",
-            items: [{ name: "Node.js / Express", val: "90%" }, { name: "MongoDB / Postgres", val: "85%" }, { name: "REST / GraphQL APIs", val: "90%" }]
+            items: [{ name: "Node.js / Hono / Express", val: "90%" }, { name: "PostgreSQL / MongoDB", val: "87%" }, { name: "REST / GraphQL APIs", val: "90%" }]
         },
         {
             category: "AI & Automation Infrastructure",
