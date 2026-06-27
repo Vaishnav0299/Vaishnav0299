@@ -1,5 +1,6 @@
 <div align="center">
-# 🪐 Vaishnav Gaware | Vaishnav0299
+  ---
+  ### 🪐 Vaishnav Gaware | Vaishnav0299
   <br />
   <br />
   <img src="https://img.shields.io/badge/SYSTEM_STATUS-%E2%9A%99%EF%B8%8F_CORE_OS_NOMINAL-6366f1?style=for-the-badge&logo=ubuntu&logoColor=fff" alt="System Status" />
