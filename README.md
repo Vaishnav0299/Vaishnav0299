@@ -23,6 +23,14 @@
 
 ---
 
+### 👤 Brief Introduction
+
+I am an **AI Engineer, Full-Stack Developer, and Research Scholar in Computer Science** based in Pune, India. I specialize in designing autonomous workflow pipelines, building scalable full-stack architectures (React, Node.js, Hono, PostgreSQL), and developing predictive machine learning models. 
+
+Connect with me on [LinkedIn](https://www.linkedin.com/in/vaishnav-gaware-107799315/) to collaborate on AI systems engineering, data science, and cloud automation.
+
+---
+
 ### 🛠️ Core Technology Execution Matrix
 
 | Category | Tech Stack |
