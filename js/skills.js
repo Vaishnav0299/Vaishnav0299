@@ -13,6 +13,10 @@ document.addEventListener('DOMContentLoaded', () => {
         {
             category: "AI & Automation Infrastructure",
             items: [{ name: "Python / TensorFlow", val: "92%" }, { name: "LangChain / Ollama", val: "88%" }, { name: "Docker / CI/CD Actions", val: "80%" }]
+        },
+        {
+            category: "Data Science & Analytics",
+            items: [{ name: "Pandas / NumPy", val: "90%" }, { name: "Scikit-Learn / ML", val: "88%" }, { name: "Data Visualization & Jupyter", val: "85%" }]
         }
     ];
 
