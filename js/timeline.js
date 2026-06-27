@@ -10,9 +10,9 @@ document.addEventListener('DOMContentLoaded', () => {
         },
         {
             time: "2025",
-            title: "Open Source & AI Orchestration",
+            title: "AI, Advanced Data Structures & Machine Learning",
             inst: "Independent Development",
-            desc: "Immersed in agentic AI frameworks, LangChain, and vector databases. Contributed to open-source repos, built custom local desktop modules, and developed end-to-end automation pipelines as part of self-directed technical growth."
+            desc: "Focused on learning artificial intelligence, advanced data structures (ADS), and machine learning (ML) models. Immersed in agentic AI frameworks, LangChain, vector databases, and algorithmic optimization routines to build predictive telemetry systems."
         },
         {
             time: "2024",
