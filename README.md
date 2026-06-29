@@ -14,7 +14,7 @@
 
 ### 🚀 About Me
 
-*   🎓 **AI & Data Science Undergraduate** (Class of 2027)<div align="center">
+*   🎓 **AI & Data Science Undergraduate '27**<div align="center">
 
 # 🛰️ ARCHITECTURAL INTERFACE PORTAL
 ### 🪐 Vaishnav Gaware | Vaishnav0299
