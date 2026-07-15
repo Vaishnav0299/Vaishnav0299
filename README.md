@@ -1,12 +1,7 @@
 <div align="center"><h1>👋 Hey, I'm Vaishnav Gaware </h1></div>
 
-<div align="center">
+<sdiv align="center">
   <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=24&pause=1000&color=a855f7&center=true&vCenter=true&width=900&lines=AI+%26+Data+Science+Undergraduate;Full+Stack+AI+Developer;Machine+Learning+Engineer;Data+Scientist;Building+Scalable+Applications;Open+Source+Contributor" alt="Typing SVG" />
-
----
-
-<div align="center">
-
 ---
 
 ## 👨‍💻 About Me
@@ -23,7 +18,7 @@
 
 # 🌐 Connect with Me
 
-<p align="left">
+<p align="center">
 <a href="https://github.com/Vaishnav0299">
 <img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white"/>
 </a>
