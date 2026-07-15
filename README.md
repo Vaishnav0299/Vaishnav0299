@@ -71,8 +71,8 @@ Connect with me on [LinkedIn](https://www.linkedin.com/in/vaishnav-gaware-107799
   <br />
   <br />
   
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Vaishnav0299&layout=compact&theme=transparent&hide_border=true&title_color=a855f7&text_color=a1a1aa&icon_color=3b82f6" alt="Most Used Languages" />
-  <img src="https://github-readme-stats.vercel.app/api?username=Vaishnav0299&show_icons=true&theme=transparent&hide_border=true&title_color=a855f7&text_color=a1a1aa&icon_color=3b82f6" alt="GitHub Stats" />
+  <img src="https://github-stats-extended.vercel.app/api/top-langs/?username=Vaishnav0299&layout=compact&theme=transparent&hide_border=true&title_color=a855f7&text_color=a1a1aa&icon_color=3b82f6" alt="Most Used Languages" />
+  <img src="https://github-stats-extended.vercel.app/api?username=Vaishnav0299&show_icons=true&theme=transparent&hide_border=true&title_color=a855f7&text_color=a1a1aa&icon_color=3b82f6" alt="GitHub Stats" />
 </div>
 
 *   💻 **Full Stack Developer** passionate about crafting elegant, production-grade systems.
@@ -97,12 +97,12 @@ Connect with me on [LinkedIn](https://www.linkedin.com/in/vaishnav-gaware-107799
 ### 📊 Real-Time Git Telemetry
 
 <p align="center">
-  <img width="48%" src="https://github-readme-stats.vercel.app/api?username=Vaishnav0299&show_icons=true&theme=tokyonight&hide_border=true&count_private=true&cache_seconds=1800" alt="GitHub Stats" />
-  <img width="48%" src="https://github-readme-streak-stats.herokuapp.com/?user=Vaishnav0299&theme=tokyonight&hide_border=true" alt="GitHub Streak" />
+  <img width="48%" src="https://github-stats-extended.vercel.app/api?username=Vaishnav0299&show_icons=true&theme=tokyonight&hide_border=true&count_private=true&cache_seconds=1800" alt="GitHub Stats" />
+  <img width="48%" src="https://streak-stats.demolab.com/?user=Vaishnav0299&theme=tokyonight&hide_border=true" alt="GitHub Streak" />
 </p>
 
 <p align="center">
-  <img width="70%" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Vaishnav0299&layout=compact&theme=tokyonight&hide_border=true&cache_seconds=1800" alt="Top Languages" />
+  <img width="70%" src="https://github-stats-extended.vercel.app/api/top-langs/?username=Vaishnav0299&layout=compact&theme=tokyonight&hide_border=true&cache_seconds=1800" alt="Top Languages" />
 </p>
 
 #### 📈 Contribution Velocity
