@@ -1,16 +1,8 @@
 import React from 'react';
-import { Mail, Linkedin, Github, Download, Globe, Send, Copy, Check } from 'lucide-react';
+import { Mail, Linkedin, Github, Globe } from 'lucide-react';
 import { aboutData } from '../data/portfolioData';
 
 export function Contact({ onShowToast }) {
-  const [copied, setCopied] = React.useState(false);
-
-  const handleCopyEmail = () => {
-    navigator.clipboard.writeText(aboutData.email);
-    setCopied(true);
-    if (onShowToast) onShowToast('Email copied to clipboard!');
-    setTimeout(() => setCopied(false), 2500);
-  };
 
   return (
     <section id="contact" class="contact-section">
@@ -31,18 +23,6 @@ export function Contact({ onShowToast }) {
             <a href={`mailto:${aboutData.email}`} class="btn btn-primary btn-contact">
               <Mail style={{ width: 18, height: 18 }} />
               <span>Send Email</span>
-            </a>
-
-            {/* Copy Email Button */}
-            <button onClick={handleCopyEmail} class="btn btn-secondary btn-contact">
-              {copied ? <Check style={{ width: 18, height: 18, color: 'var(--accent-emerald)' }} /> : <Copy style={{ width: 18, height: 18 }} />}
-              <span>{copied ? 'Copied!' : 'Copy Email Address'}</span>
-            </button>
-
-            {/* Download Resume Button */}
-            <a href={aboutData.github} target="_blank" rel="noreferrer" class="btn btn-secondary btn-contact">
-              <Download style={{ width: 18, height: 18 }} />
-              <span>Download Resume</span>
             </a>
           </div>
 
