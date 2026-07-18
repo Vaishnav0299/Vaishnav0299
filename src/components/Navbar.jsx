@@ -17,9 +17,9 @@ export function Navbar({ activeSection, onOpenCmd, theme, onToggleTheme }) {
           <a href="#system-terminal" class={activeSection === 'system-terminal' ? 'active' : ''}>Terminal</a>
         </nav>
         <div class="nav-actions">
-          <button class="cmd-k-btn" onClick={onOpenCmd} title="Open Command Palette (⌘K)">
-            <Search style={{ width: 14, height: 14 }} />
-            <span class="cmd-k-kbd">⌘K</span>
+          <button class="cmd-k-btn" onClick={onOpenCmd} title="Search website...">
+            <Search style={{ width: 15, height: 15 }} />
+            <span>Search</span>
           </button>
           <button id="theme-toggle" onClick={onToggleTheme} aria-label="Toggle Theme">
             {theme === 'dark' ? <Sun class="sun-icon" /> : <Moon class="moon-icon" />}
