@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
+import { About } from './components/About';
 import { Dashboard } from './components/Dashboard';
 import { Projects } from './components/Projects';
 import { Skills } from './components/Skills';
 import { Timeline } from './components/Timeline';
+import { Contact } from './components/Contact';
 import { Terminal } from './components/Terminal';
 import { CommandPalette } from './components/CommandPalette';
 import { Toast } from './components/Toast';
@@ -36,7 +38,7 @@ export function App() {
   // 3D Card Tilt Mouse Interaction
   useEffect(() => {
     const handleMouseMove = (e) => {
-      const card = e.target.closest('.portfolio-card, .metric-card, .skill-category-card, .visualization-card');
+      const card = e.target.closest('.portfolio-card, .metric-card, .skill-category-card, .visualization-card, .about-card, .contact-card');
       if (!card) return;
 
       const rect = card.getBoundingClientRect();
@@ -52,7 +54,7 @@ export function App() {
     };
 
     const handleMouseLeave = (e) => {
-      const card = e.target.closest('.portfolio-card, .metric-card, .skill-category-card, .visualization-card');
+      const card = e.target.closest('.portfolio-card, .metric-card, .skill-category-card, .visualization-card, .about-card, .contact-card');
       if (card) {
         card.style.transform = `perspective(1000px) rotateX(0deg) rotateY(0deg) translateY(0deg) scale(1)`;
       }
@@ -106,10 +108,12 @@ export function App() {
 
       <main class="main-content">
         <Hero />
+        <About />
         <Dashboard />
         <Projects />
         <Skills />
         <Timeline />
+        <Contact onShowToast={showToast} />
         <Terminal />
       </main>
 

@@ -121,3 +121,24 @@ export const timelineData = [
         desc: "Started deep dive into Python, C/C++, core algorithms, data structures, and statistical data analysis."
     }
 ];
+
+export const aboutData = {
+    avatarUrl: "https://avatars.githubusercontent.com/u/166599134?v=4",
+    name: "Vaishnav Gaware",
+    title: "Full-Stack Developer and AI & Data Science Student",
+    education: "B.Tech in Artificial Intelligence & Data Science (Class of 2027)",
+    location: "India",
+    email: "vaishnavgaware1@gmail.com",
+    github: "https://github.com/Vaishnav0299",
+    linkedin: "https://www.linkedin.com/in/vaishnav-gaware-107799315/",
+    resumeUrl: "https://github.com/Vaishnav0299",
+    bio: "I am an enthusiastic Full-Stack Developer and AI & Data Science undergraduate with a passion for building high-performance web applications, intelligent ML systems, and data processing pipelines. I specialize in modern JavaScript/TypeScript (React, Next.js, Node.js) and Python (Data Science, ML, AI).",
+    interests: [
+        "Full-Stack Web Development (React, Next.js, Node.js)",
+        "Artificial Intelligence & Agentic AI Workflows",
+        "Data Science, ML Modeling & Predictive Analytics",
+        "Open-Source Software & Developer Utilities"
+    ],
+    seeking: "Looking for Software Engineering & AI Internships, Full-Stack Developer opportunities, and collaborative open-source projects."
+};
+

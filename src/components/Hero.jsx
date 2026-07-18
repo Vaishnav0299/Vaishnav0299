@@ -1,10 +1,22 @@
 import React from 'react';
-import { ArrowRight, Github, Linkedin, Globe, Mail } from 'lucide-react';
+import { ArrowRight, Download, Github, Linkedin, Globe, Mail } from 'lucide-react';
+import { aboutData } from '../data/portfolioData';
 
 export function Hero() {
   return (
     <section id="home" class="hero-section">
       <div class="hero-container">
+        
+        {/* Profile Avatar Card */}
+        <div class="hero-avatar-wrapper">
+          <img
+            src={aboutData.avatarUrl}
+            alt={aboutData.name}
+            class="hero-avatar-img"
+          />
+          <div class="avatar-glow-ring"></div>
+        </div>
+
         <div class="badge-container">
           <span class="status-badge">
             <span class="pulse-dot"></span> Available for Opportunities
@@ -12,13 +24,13 @@ export function Hero() {
         </div>
         
         <h1 class="hero-title">
-          Hi, I'm <span class="text-gradient">Vaishnav Gaware</span>
+          Hi, I'm <span class="text-gradient">{aboutData.name}</span>
         </h1>
         <p class="hero-subtitle">
-          Full-Stack Developer and AI & Data Science Student
+          {aboutData.title}
         </p>
         <p class="hero-description">
-          Building high-performance web applications, scalable architectural backends, and data science pipelines. Focused on clean code, modern engineering, and intuitive user experiences.
+          Building high-performance web applications, scalable architectural backends, and intelligent data science pipelines. Focused on clean code, modern engineering, and intuitive user experiences.
         </p>
 
         <div class="hero-cta-group">
@@ -26,22 +38,23 @@ export function Hero() {
             <span>Explore Projects</span>
             <ArrowRight style={{ width: 18, height: 18 }} />
           </a>
-          <a href="#dashboard" class="btn btn-secondary">
-            <span>Live Dashboard</span>
+          <a href={aboutData.github} target="_blank" rel="noreferrer" class="btn btn-secondary">
+            <Download style={{ width: 18, height: 18 }} />
+            <span>Download Resume</span>
           </a>
         </div>
 
         <div class="social-quick-links">
-          <a href="https://github.com/Vaishnav0299" target="_blank" rel="noreferrer" aria-label="GitHub" title="GitHub Profile">
+          <a href={aboutData.github} target="_blank" rel="noreferrer" aria-label="GitHub" title="GitHub Profile">
             <Github style={{ width: 20, height: 20 }} />
           </a>
-          <a href="https://www.linkedin.com/in/vaishnav-gaware-107799315/" target="_blank" rel="noreferrer" aria-label="LinkedIn" title="LinkedIn Profile">
+          <a href={aboutData.linkedin} target="_blank" rel="noreferrer" aria-label="LinkedIn" title="LinkedIn Profile">
             <Linkedin style={{ width: 20, height: 20 }} />
           </a>
-          <a href="https://Vaishnav0299.github.io/Vaishnav0299/" target="_blank" rel="noreferrer" aria-label="Portfolio" title="Live Website">
+          <a href="https://Vaishnav0299.github.io/Vaishnav0299/" target="_blank" rel="noreferrer" aria-label="Portfolio" title="Live Portfolio Website">
             <Globe style={{ width: 20, height: 20 }} />
           </a>
-          <a href="mailto:vaishnavgaware1@gmail.com" aria-label="Mail" title="Send Email">
+          <a href={`mailto:${aboutData.email}`} aria-label="Mail" title="Send Email">
             <Mail style={{ width: 20, height: 20 }} />
           </a>
         </div>

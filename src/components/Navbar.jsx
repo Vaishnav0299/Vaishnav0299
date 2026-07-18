@@ -10,10 +10,12 @@ export function Navbar({ activeSection, onOpenCmd, theme, onToggleTheme }) {
         </a>
         <nav class="nav-links">
           <a href="#home" class={activeSection === 'home' ? 'active' : ''}>Home</a>
+          <a href="#about" class={activeSection === 'about' ? 'active' : ''}>About</a>
           <a href="#dashboard" class={activeSection === 'dashboard' ? 'active' : ''}>Dashboard</a>
           <a href="#projects" class={activeSection === 'projects' ? 'active' : ''}>Projects</a>
           <a href="#skills" class={activeSection === 'skills' ? 'active' : ''}>Skills</a>
           <a href="#timeline" class={activeSection === 'timeline' ? 'active' : ''}>Experience</a>
+          <a href="#contact" class={activeSection === 'contact' ? 'active' : ''}>Contact</a>
           <a href="#system-terminal" class={activeSection === 'system-terminal' ? 'active' : ''}>Terminal</a>
         </nav>
         <div class="nav-actions">

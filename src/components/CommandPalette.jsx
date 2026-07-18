@@ -3,13 +3,15 @@ import { Search, Home, BarChart2, FolderGit2, Cpu, Briefcase, Terminal as TermIc
 
 const cmdItems = [
   { id: 1, label: 'Go to Home', target: '#home', key: '#home', icon: Home, action: 'nav' },
-  { id: 2, label: 'Go to Telemetry Dashboard', target: '#dashboard', key: '#dashboard', icon: BarChart2, action: 'nav' },
-  { id: 3, label: 'View Projects', target: '#projects', key: '#projects', icon: FolderGit2, action: 'nav' },
-  { id: 4, label: 'View Skills & Tech Stack', target: '#skills', key: '#skills', icon: Cpu, action: 'nav' },
-  { id: 5, label: 'View Experience & Education', target: '#timeline', key: '#timeline', icon: Briefcase, action: 'nav' },
-  { id: 6, label: 'Open Developer Terminal', target: '#system-terminal', key: '#terminal', icon: TermIcon, action: 'nav' },
-  { id: 7, label: 'Open GitHub Profile', target: 'https://github.com/Vaishnav0299', key: '↗', icon: Github, action: 'ext' },
-  { id: 8, label: 'Open LinkedIn Profile', target: 'https://www.linkedin.com/in/vaishnav-gaware-107799315/', key: '↗', icon: Linkedin, action: 'ext' }
+  { id: 2, label: 'Go to About Me', target: '#about', key: '#about', icon: Briefcase, action: 'nav' },
+  { id: 3, label: 'Go to Telemetry Dashboard', target: '#dashboard', key: '#dashboard', icon: BarChart2, action: 'nav' },
+  { id: 4, label: 'View Projects', target: '#projects', key: '#projects', icon: FolderGit2, action: 'nav' },
+  { id: 5, label: 'View Skills & Tech Stack', target: '#skills', key: '#skills', icon: Cpu, action: 'nav' },
+  { id: 6, label: 'View Experience & Education', target: '#timeline', key: '#timeline', icon: Briefcase, action: 'nav' },
+  { id: 7, label: 'Get in Touch (Contact)', target: '#contact', key: '#contact', icon: TermIcon, action: 'nav' },
+  { id: 8, label: 'Open Developer Terminal', target: '#system-terminal', key: '#terminal', icon: TermIcon, action: 'nav' },
+  { id: 9, label: 'Open GitHub Profile', target: 'https://github.com/Vaishnav0299', key: '↗', icon: Github, action: 'ext' },
+  { id: 10, label: 'Open LinkedIn Profile', target: 'https://www.linkedin.com/in/vaishnav-gaware-107799315/', key: '↗', icon: Linkedin, action: 'ext' }
 ];
 
 export function CommandPalette({ isOpen, onClose }) {
