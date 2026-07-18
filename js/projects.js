@@ -46,10 +46,20 @@ document.addEventListener('DOMContentLoaded', () => {
                 <span class="proj-badge ${proj.badgeClass}">${proj.type}</span>
                 <h3>${proj.name}</h3>
                 <p>${proj.desc}</p>
-                <div class="tech-tag-wrap" style="margin-bottom: 0;">
+                <div class="tech-tag-wrap" style="margin-bottom: 1.25rem;">
                     ${proj.stack.map(tag => `<span class="tech-tag">${tag}</span>`).join('')}
                 </div>
             </div>
+            <div class="project-actions" style="margin-top: 0.5rem; display: flex; gap: 0.75rem;">
+                <a href="${proj.github}" target="_blank" class="btn btn-secondary btn-sm" style="display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.4rem 0.8rem; font-size: 0.85rem; border-radius: 6px; text-decoration: none;">
+                    <i data-lucide="github" style="width: 14px; height: 14px;"></i> GitHub
+                </a>
+            </div>
         </div>
     `).join('');
+
+    if (typeof lucide !== 'undefined') {
+        lucide.createIcons();
+    }
 });
+
