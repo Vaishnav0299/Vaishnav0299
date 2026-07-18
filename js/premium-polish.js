@@ -30,11 +30,12 @@ document.addEventListener('DOMContentLoaded', () => {
             "  • AI & ML  : LangChain, Ollama, TensorFlow, Scikit-Learn, Pandas"
         ],
         'projects': () => [
-            "🚀 Featured Projects:",
-            "  1. Enterprise Management & Payroll Platform [Full-Stack]",
-            "  2. Autonomous RAG Multi-Agent Assistant [Agentic AI]",
-            "  3. AI Generative Image Orchestrator [Artificial Intelligence]",
-            "  4. Predictive Customer Churn Analytics [Data Science]"
+            "🚀 Featured Repositories & Live Demos:",
+            "  1. Productivity-Pro [Live Demo: https://productivity-pro-bay.vercel.app]",
+            "  2. My Study Assistant [Live Demo: https://my-study-assistant-ten.vercel.app]",
+            "  3. Deskify [Web Utility]",
+            "  4. Form-Builder [Drag & Drop Form Engine]",
+            "  5. Mentor Backend [REST API Service]"
         ],
         'contact': () => [
             "📫 Contact Channels:",

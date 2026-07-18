@@ -2,50 +2,62 @@ document.addEventListener('DOMContentLoaded', () => {
     const projectGrid = document.getElementById('portfolio-project-grid');
     const filterButtons = document.querySelectorAll('.filter-btn');
     
+    // Real, authentic public projects from GitHub user Vaishnav0299
     const curatedProjects = [
         {
             id: 1,
             category: "fullstack",
-            name: "Enterprise Management & Payroll Platform",
+            name: "Productivity-Pro",
             type: "Full Stack",
             badgeClass: "",
-            desc: "A production-grade enterprise operational architecture featuring automated internal attendance verification pipelines, dynamic payload mechanics for payroll processing, and cross-modular analytics dashboards.",
-            stack: ["React", "Node.js", "PostgreSQL", "Hono", "TypeScript"],
-            github: "https://github.com/Vaishnav0299",
-            live: "https://Vaishnav0299.github.io/Vaishnav0299/"
+            desc: "Enterprise-ready collaborative real-time workspace application integrating workspaces, kanban boards, collaborative documents, presence indicators, and administrative audit panels.",
+            stack: ["TypeScript", "React", "Next.js", "Tailwind CSS", "Node.js"],
+            github: "https://github.com/Vaishnav0299/Productivity-Pro",
+            live: "https://productivity-pro-bay.vercel.app"
         },
         {
             id: 2,
             category: "ai",
-            name: "Autonomous RAG Multi-Agent Assistant",
-            type: "Agentic AI",
+            name: "My Study Assistant",
+            type: "AI & Automation",
             badgeClass: "ai",
-            desc: "An enterprise intelligence engine mapping localized text corpuses to relational spatial data matrices using vector embeddings for low-latency contextual semantic lookup and multi-agent reasoning.",
-            stack: ["LangChain", "Ollama", "Python", "ChromaDB", "FastAPI"],
-            github: "https://github.com/Vaishnav0299",
-            live: "https://Vaishnav0299.github.io/Vaishnav0299/"
+            desc: "An intelligent study platform designed for note organization, automated flashcards generation, topic summaries, and interactive learning workflows.",
+            stack: ["JavaScript", "React", "Node.js", "AI API", "Tailwind CSS"],
+            github: "https://github.com/Vaishnav0299/my-study-assistant",
+            live: "https://my-study-assistant-ten.vercel.app"
         },
         {
             id: 3,
-            category: "ai",
-            name: "AI Generative Image Orchestrator",
-            type: "Artificial Intelligence",
-            badgeClass: "ai",
-            desc: "Designed and engineered an orchestrator that pulls text prompt tokens and maps them directly to high-density vector-generative imagery algorithms for automated asset compilation.",
-            stack: ["Python", "TensorFlow", "OpenAI API", "Docker", "Flask"],
-            github: "https://github.com/Vaishnav0299",
-            live: "https://Vaishnav0299.github.io/Vaishnav0299/"
+            category: "fullstack",
+            name: "Deskify",
+            type: "Web Utility",
+            badgeClass: "",
+            desc: "A lightweight, 100% client-side web utility to instantly convert vertical mobile wallpapers into widescreen desktop backgrounds. Zero backend, zero tracking, pure JavaScript.",
+            stack: ["TypeScript", "HTML5", "Canvas API", "CSS3"],
+            github: "https://github.com/Vaishnav0299/Deskify",
+            live: null
         },
         {
             id: 4,
-            category: "datascience",
-            name: "Predictive Churn Analytics Pipeline",
-            type: "Data Science",
+            category: "fullstack",
+            name: "Form-Builder",
+            type: "Full Stack",
             badgeClass: "",
-            desc: "Designed and implemented an end-to-end data intelligence and modeling pipeline that ingests customer telemetry, performs statistical EDA, and deploys a classification model for churn prediction.",
-            stack: ["Python", "Pandas", "Scikit-Learn", "Matplotlib", "Jupyter"],
-            github: "https://github.com/Vaishnav0299",
-            live: "https://Vaishnav0299.github.io/Vaishnav0299/"
+            desc: "Dynamic drag-and-drop form creation engine featuring customizable field validation, interactive preview controls, and JSON schema export.",
+            stack: ["TypeScript", "React", "Tailwind CSS", "JSON Schema"],
+            github: "https://github.com/Vaishnav0299/Form-Builder",
+            live: null
+        },
+        {
+            id: 5,
+            category: "fullstack",
+            name: "Mentor Backend Service",
+            type: "Backend API",
+            badgeClass: "",
+            desc: "Scalable Node.js REST API service providing mentorship matching workflows, session scheduling, authentication, and database persistence.",
+            stack: ["JavaScript", "Node.js", "Express", "REST API"],
+            github: "https://github.com/Vaishnav0299/mentor-backend",
+            live: null
         }
     ];
 
@@ -73,9 +85,11 @@ document.addEventListener('DOMContentLoaded', () => {
                     <a href="${proj.github}" target="_blank" class="btn btn-secondary btn-sm" style="display: inline-flex; align-items: center; gap: 0.4rem; border-radius: 6px;">
                         <i data-lucide="github" style="width: 14px; height: 14px;"></i> Code
                     </a>
+                    ${proj.live ? `
                     <a href="${proj.live}" target="_blank" class="btn btn-secondary btn-sm" style="display: inline-flex; align-items: center; gap: 0.4rem; border-radius: 6px;">
-                        <i data-lucide="external-link" style="width: 14px; height: 14px;"></i> Demo
+                        <i data-lucide="external-link" style="width: 14px; height: 14px;"></i> Live Demo
                     </a>
+                    ` : ''}
                 </div>
             </div>
         `).join('');

@@ -33,19 +33,19 @@ document.addEventListener('DOMContentLoaded', async () => {
 
         // Clear layout skeletons and build repo cards
         repoContainer.innerHTML = '';
-        const eliteSelection = repos.slice(0, 6);
+        const eliteSelection = repos.filter(r => r.name !== 'Vaishnav0299').slice(0, 6);
 
         eliteSelection.forEach(repo => {
             const projectCardMarkup = `
                 <div class="repo-card">
                     <div>
                         <a href="${repo.html_url}" target="_blank" class="repo-name">${repo.name}</a>
-                        <p class="repo-description">${repo.description || "System engineering parameters specified. Open source module development execution ongoing."}</p>
+                        <p class="repo-description">${repo.description || "Open source repository developed by Vaishnav Gaware."}</p>
                     </div>
                     <div class="repo-meta-footer">
                         <div class="repo-lang">
                             <span class="lang-dot"></span>
-                            <span>${repo.language || "Compiled"}</span>
+                            <span>${repo.language || "Code"}</span>
                         </div>
                         <div class="repo-stats-aside">
                             <span><i data-lucide="star" style="width:12px;height:12px;"></i> ${repo.stargazers_count}</span>
@@ -62,6 +62,6 @@ document.addEventListener('DOMContentLoaded', async () => {
         }
     } else {
         syncLabel.textContent = "Pipeline Error Detected";
-        repoContainer.innerHTML = `<p style="grid-column: 1/-1; text-align:center; color: var(--text-muted);">Pipeline telemetry extraction error. Verify configuration files parameters.</p>`;
+        repoContainer.innerHTML = `<p style="grid-column: 1/-1; text-align:center; color: var(--text-muted);">Failed to load repositories. Please try again later.</p>`;
     }
 });
