@@ -1,51 +1,48 @@
-name: Deploy React SPA to GitHub Pages
-
+name: Automated Telemetry Pipeline Cache Updates
 on:
-  push:
-    branches:
-      - main
-  workflow_dispatch:
+  schedule:
+    # Trigger execution every 6 hours automatically
+    - cron: '0 */6 * * *'
+  workflow_dispatch: # Allows manual pipeline execution override in the Actions tab
 
 permissions:
-  contents: read
-  pages: write
-  id-token: write
-
-concurrency:
-  group: pages
-  cancel-in-progress: true
+  contents: write
 
 jobs:
-  build:
+  cache-telemetry:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout Code
+      - name: Checkout Code Repository
         uses: actions/checkout@v4
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: 20
-          cache: 'npm'
+      - name: Initialize Local Storage Directory Tree
+        run: mkdir -p data
 
-      - name: Install Dependencies
-        run: npm ci
+      - name: Execute GitHub API Aggregation Pipeline
+        run: |
+          echo "Ingesting core profile statistics parameters..."
+          curl -s -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
+            "https://api.github.com/users/Vaishnav0299" > data/profile.json
+          echo "Ingesting repository metadata matrices..."
+          curl -s -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
+            "https://api.github.com/users/Vaishnav0299/repos?sort=updated&per_page=30" > data/repos.json
+          echo "Compiling structural local distribution tables..."
+          # Combines profiles and repositories together safely inside an asset structure
+          echo "{\"profile\": $(cat data/profile.json), \"repos\": $(cat data/repos.json), \"compiledAt\": $(date +%s)}" > data/telemetry.json
+          # Clean up temporary layout pieces
+          rm data/profile.json
+          rm data/repos.json
 
-      - name: Build Production SPA
-        run: npm run build
-
-      - name: Upload Pages Artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: ./dist
-
-  deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
-    needs: build
-    steps:
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
+      - name: Commit and Push Updated Data Cache
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/telemetry.json
+          
+          # Check if changes exist before trying to make a commit
+          if git diff --staged --quiet; then
+            echo "No variations detected in metrics engine telemetry. Skipping synchronization."
+          else
+            git commit -m "chore: automated telemetry pipeline synchronized"
+            git push
+          fi
