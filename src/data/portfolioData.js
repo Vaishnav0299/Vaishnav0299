@@ -99,7 +99,7 @@ export const timelineData = [
     {
         time: "2026",
         title: "Full-Stack Developer & AI Systems Engineer",
-        inst: "LiftUpLabs & Open Source",
+        inst: "Lift LLP & Open Source",
         desc: "Architecting full-stack web applications, microservices pipelines, specialized workflow routines for startup deployment, and implementing predictive semantic caching configurations."
     },
     {
@@ -139,6 +139,6 @@ export const aboutData = {
         "Data Science, ML Modeling & Predictive Analytics",
         "Open-Source Software & Developer Utilities"
     ],
-    seeking: "Looking for Software Engineering & AI Internships, Full-Stack Developer opportunities, and collaborative open-source projects."
+    currentFocus: "Currently deepening my expertise in Linux system administration, server management, and CI/CD pipelines utilizing Docker and Kubernetes to build scalable, automated deployment environments."
 };
 

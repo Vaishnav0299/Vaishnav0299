@@ -23,7 +23,7 @@ export function Contact({ onShowToast }) {
         <div class="contact-card main-contact-card">
           <div class="contact-header-content">
             <h3>Let's build something great together.</h3>
-            <p>I am currently open to Software Engineering internships, Full-Stack development opportunities, and collaborative open-source projects.</p>
+            <p>Always open to collaborating on open-source projects, discussing systems architecture, DevOps pipelines, or full-stack development.</p>
           </div>
 
           <div class="contact-actions-grid">

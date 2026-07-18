@@ -62,8 +62,8 @@ export function About() {
           </div>
 
           <div class="about-card seeking-card">
-            <h3>What I'm Looking For</h3>
-            <p>{aboutData.seeking}</p>
+            <h3>Current Focus</h3>
+            <p>{aboutData.currentFocus}</p>
           </div>
         </div>
       </div>
