@@ -174,4 +174,36 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
+
+    // --- 6. Interactive 3D Card Tilt Mouse Parallax ---
+    function init3DTiltEffect() {
+        const tiltCards = document.querySelectorAll('.portfolio-card, .metric-card, .skill-category-card, .visualization-card');
+        
+        tiltCards.forEach(card => {
+            card.addEventListener('mousemove', (e) => {
+                const rect = card.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                const centerX = rect.width / 2;
+                const centerY = rect.height / 2;
+                
+                const rotateX = ((y - centerY) / centerY) * -6;
+                const rotateY = ((x - centerX) / centerX) * 6;
+                
+                card.style.transform = `perspective(1000px) rotateX(${rotateX.toFixed(2)}deg) rotateY(${rotateY.toFixed(2)}deg) translateY(-6px) scale(1.02)`;
+            });
+            
+            card.addEventListener('mouseleave', () => {
+                card.style.transform = `perspective(1000px) rotateX(0deg) rotateY(0deg) translateY(0deg) scale(1)`;
+            });
+        });
+    }
+
+    // Initialize Tilt on DOM Ready & observe dynamic insertions
+    setTimeout(init3DTiltEffect, 300);
+    const gridObserver = new MutationObserver(() => init3DTiltEffect());
+    const mainContentNode = document.querySelector('.main-content');
+    if (mainContentNode) {
+        gridObserver.observe(mainContentNode, { childList: true, subtree: true });
+    }
 });
