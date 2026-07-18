@@ -1,6 +1,12 @@
 import { useState, useEffect } from 'react';
 
-const IGNORED_REPOS = ['Vaishnav0299', 'copilot-codespaces-vscode'];
+const IGNORED_REPOS = ['Vaishnav0299'];
+
+const isCourseOrFork = (repo) => {
+  if (repo.fork) return true;
+  const lower = repo.name.toLowerCase();
+  return lower.startsWith('skills-') || lower.includes('copilot-') || lower.includes('introduction-to-github') || IGNORED_REPOS.includes(repo.name);
+};
 
 export function useTelemetry(username = 'Vaishnav0299') {
   const [data, setData] = useState({ profile: null, repos: [], compiledAt: null });
@@ -15,7 +21,7 @@ export function useTelemetry(username = 'Vaishnav0299') {
         if (res.ok) {
           const json = await res.json();
           if (json && json.profile && json.repos) {
-            const publicRepos = json.repos.filter(r => !r.private && !IGNORED_REPOS.includes(r.name));
+            const publicRepos = json.repos.filter(r => !r.private && !isCourseOrFork(r));
             setData({
               profile: json.profile,
               repos: publicRepos,
@@ -37,7 +43,7 @@ export function useTelemetry(username = 'Vaishnav0299') {
           const profile = await profRes.json();
           const rawRepos = await reposRes.json();
           const publicRepos = Array.isArray(rawRepos)
-            ? rawRepos.filter(r => !r.private && !IGNORED_REPOS.includes(r.name))
+            ? rawRepos.filter(r => !r.private && !isCourseOrFork(r))
             : [];
           
           setData({

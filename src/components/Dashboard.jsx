@@ -74,6 +74,42 @@ export function Dashboard() {
             </div>
           </div>
         </div>
+
+        {/* Repository Grid Header */}
+        <div class="repo-explorer-header">
+          <h3>Pinned & Recent Repositories</h3>
+          <span class="sync-timestamp" id="sync-time">Sync: {formattedDate}</span>
+        </div>
+
+        <div class="repo-grid" id="repo-showcase-container">
+          {loading ? (
+            <>
+              <div class="skeleton-card"></div>
+              <div class="skeleton-card"></div>
+            </>
+          ) : repos.length === 0 ? (
+            <p style={{ gridColumn: '1/-1', textCenter: 'center', color: 'var(--text-muted)' }}>No public repositories found.</p>
+          ) : (
+            repos.slice(0, 6).map(repo => (
+              <div key={repo.id} class="repo-card">
+                <div>
+                  <a href={repo.html_url} target="_blank" rel="noreferrer" class="repo-name">{repo.name}</a>
+                  <p class="repo-description">{repo.description || "Open source repository developed by Vaishnav Gaware."}</p>
+                </div>
+                <div class="repo-meta-footer">
+                  <div class="repo-lang">
+                    <span class="lang-dot"></span>
+                    <span>{repo.language || "Code"}</span>
+                  </div>
+                  <div class="repo-stats-aside">
+                    <span><Star style={{ width: 12, height: 12 }} /> {repo.stargazers_count}</span>
+                    <span><GitFork style={{ width: 12, height: 12 }} /> {repo.forks_count}</span>
+                  </div>
+                </div>
+              </div>
+            ))
+          )}
+        </div>
       </div>
     </section>
   );
