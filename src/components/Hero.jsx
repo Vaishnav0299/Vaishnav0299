@@ -29,6 +29,14 @@ export function Hero() {
         <p class="hero-subtitle">
           {aboutData.title}
         </p>
+
+        {/* What I Do Tags */}
+        <div class="what-i-do-bar" style={{ display: 'flex', gap: '0.6rem', flexWrap: 'wrap', justifyContent: 'center', marginBottom: '1.5rem' }}>
+          <span class="tech-tag" style={{ fontSize: '0.85rem', padding: '0.35rem 0.85rem', borderRadius: '20px', background: 'rgba(139, 92, 246, 0.15)', borderColor: 'rgba(139, 92, 246, 0.3)', color: 'var(--text-primary)', fontWeight: 600 }}>⚡ Full-Stack Web Development</span>
+          <span class="tech-tag" style={{ fontSize: '0.85rem', padding: '0.35rem 0.85rem', borderRadius: '20px', background: 'rgba(6, 182, 212, 0.15)', borderColor: 'rgba(6, 182, 212, 0.3)', color: 'var(--text-primary)', fontWeight: 600 }}>🤖 AI & Machine Learning</span>
+          <span class="tech-tag" style={{ fontSize: '0.85rem', padding: '0.35rem 0.85rem', borderRadius: '20px', background: 'rgba(236, 72, 153, 0.15)', borderColor: 'rgba(236, 72, 153, 0.3)', color: 'var(--text-primary)', fontWeight: 600 }}>📊 Data Science & Analytics</span>
+        </div>
+
         <p class="hero-description">
           Building high-performance web applications, scalable architectural backends, and intelligent data science pipelines. Focused on clean code, modern engineering, and intuitive user experiences.
         </p>
