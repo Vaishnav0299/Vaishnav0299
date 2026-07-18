@@ -6,7 +6,7 @@ export function About() {
   return (
     <section id="about" class="about-section">
       <div class="section-header">
-        <h2 class="section-title">👨‍💻 About Me</h2>
+        <h2 class="section-title">About Me</h2>
         <p class="section-subtitle">Background, education, core technical interests, and career objectives.</p>
       </div>
 
@@ -45,12 +45,12 @@ export function About() {
         {/* Right Column: Bio, Core Focus & What I'm Looking For */}
         <div class="about-content-column">
           <div class="about-card bio-card">
-            <h3><User style={{ width: 20, height: 20, color: 'var(--accent-primary)' }} /> Short Bio</h3>
+            <h3>Short Bio</h3>
             <p>{aboutData.bio}</p>
           </div>
 
           <div class="about-card interests-card">
-            <h3><CheckCircle2 style={{ width: 20, height: 20, color: 'var(--accent-emerald)' }} /> Core Technical Interests</h3>
+            <h3>Core Technical Interests</h3>
             <ul class="interests-list">
               {aboutData.interests.map((item, idx) => (
                 <li key={idx}>
@@ -62,7 +62,7 @@ export function About() {
           </div>
 
           <div class="about-card seeking-card">
-            <h3><Target style={{ width: 20, height: 20, color: 'var(--accent-secondary)' }} /> What I'm Looking For</h3>
+            <h3>What I'm Looking For</h3>
             <p>{aboutData.seeking}</p>
           </div>
         </div>

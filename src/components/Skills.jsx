@@ -39,18 +39,14 @@ export function Skills() {
   return (
     <section id="skills" class="skills-section">
       <div class="section-header">
-        <h2 class="section-title">🛠️ Technical Expertise</h2>
+        <h2 class="section-title">Technical Expertise</h2>
         <p class="section-subtitle">Technologies, frameworks, and core competencies I work with daily.</p>
       </div>
       <div class="skills-grid" ref={gridRef} id="skills-matrix-grid">
         {skillsData.map((cat, idx) => {
-          const IconComp = iconMap[cat.icon] || Cpu;
           return (
             <div key={idx} class="skill-category-card">
-              <h3>
-                <IconComp style={{ width: 18, height: 18, color: 'var(--accent-primary)' }} />
-                {cat.category}
-              </h3>
+              <h3>{cat.category}</h3>
               {cat.items.map((s, sIdx) => (
                 <div key={sIdx} class="skill-bar-container">
                   <div class="skill-info">

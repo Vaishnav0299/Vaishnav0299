@@ -12,7 +12,7 @@ export function Dashboard() {
     <section id="dashboard" class="dashboard-section">
       <div class="dashboard-container">
         <div class="section-header">
-          <h2 class="section-title">📊 Live GitHub Telemetry</h2>
+          <h2 class="section-title">Live GitHub Telemetry</h2>
           <p class="section-subtitle">Real-time repository statistics synced via GitHub REST API & automated cache pipelines.</p>
         </div>
 
@@ -22,7 +22,6 @@ export function Dashboard() {
             <div class="card-glow"></div>
             <div class="metric-header">
               <span class="metric-label">Public Repositories</span>
-              <Package class="metric-icon" />
             </div>
             <div class="metric-value">{loading ? '--' : profile?.public_repos || repos.length}</div>
             <div class="metric-footer">Open source codebases</div>
@@ -32,7 +31,6 @@ export function Dashboard() {
             <div class="card-glow"></div>
             <div class="metric-header">
               <span class="metric-label">Total Stars</span>
-              <Star class="metric-icon" />
             </div>
             <div class="metric-value">{loading ? '--' : totalStars}</div>
             <div class="metric-footer">Community bookmarks</div>
@@ -42,7 +40,6 @@ export function Dashboard() {
             <div class="card-glow"></div>
             <div class="metric-header">
               <span class="metric-label">Followers</span>
-              <Users class="metric-icon" />
             </div>
             <div class="metric-value">{loading ? '--' : profile?.followers || 0}</div>
             <div class="metric-footer">GitHub connections</div>
@@ -52,7 +49,6 @@ export function Dashboard() {
             <div class="card-glow"></div>
             <div class="metric-header">
               <span class="metric-label">Public Gists</span>
-              <Code2 class="metric-icon" />
             </div>
             <div class="metric-value">{loading ? '--' : profile?.public_gists || 0}</div>
             <div class="metric-footer">Snippets & utilities</div>
@@ -62,13 +58,13 @@ export function Dashboard() {
         {/* Telemetry Visualizations */}
         <div class="telemetry-visualizations">
           <div class="visualization-card">
-            <h3><GitCommit /> Commit Contribution Activity</h3>
+            <h3>Commit Contribution Activity</h3>
             <div class="viz-img-wrapper">
               <img src="https://github-readme-activity-graph.vercel.app/graph?username=Vaishnav0299&bg_color=00000000&color=a855f7&line=3b82f6&point=a855f7&area=true&hide_border=true&hide_title=true" alt="Commit Activity Graph" />
             </div>
           </div>
           <div class="visualization-card">
-            <h3><PieChart /> Top Languages & Tech Stack</h3>
+            <h3>Top Languages & Tech Stack</h3>
             <div class="viz-img-wrapper">
               <img src="https://github-stats-extended.vercel.app/api/top-langs/?username=Vaishnav0299&layout=compact&theme=transparent&hide_border=true&title_color=a855f7&text_color=a1a1aa&icon_color=3b82f6&hide_title=true" alt="Most Used Languages" />
             </div>

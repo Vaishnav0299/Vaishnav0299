@@ -12,7 +12,7 @@ export function Projects() {
   return (
     <section id="projects" class="projects-section">
       <div class="section-header">
-        <h2 class="section-title">🚀 Featured Projects</h2>
+        <h2 class="section-title">Featured Projects</h2>
         <p class="section-subtitle">Production-grade web applications, AI models, and automated data pipelines.</p>
       </div>
 

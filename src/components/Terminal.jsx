@@ -111,7 +111,7 @@ export function Terminal() {
   return (
     <section id="system-terminal" class="terminal-section">
       <div class="section-header">
-        <h2 class="section-title">🖥️ Interactive Developer Terminal</h2>
+        <h2 class="section-title">Interactive Developer Terminal</h2>
         <p class="section-subtitle">Type commands below or click quick shortcuts to interact with the environment.</p>
       </div>
       

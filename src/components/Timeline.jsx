@@ -5,7 +5,7 @@ export function Timeline() {
   return (
     <section id="timeline" class="timeline-section">
       <div class="section-header">
-        <h2 class="section-title">💼 Career & Education</h2>
+        <h2 class="section-title">Career & Education</h2>
         <p class="section-subtitle">Engineering experience, academic milestones, and open-source contributions.</p>
       </div>
       <div class="timeline-container" id="vertical-timeline">
