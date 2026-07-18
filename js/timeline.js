@@ -4,27 +4,27 @@ document.addEventListener('DOMContentLoaded', () => {
     const roadmapData = [
         {
             time: "2026",
-            title: "Full-Stack Developer & AI Engineer",
-            inst: "LiftUpLabs",
-            desc: "Architecting microservices pipelines, setting up specialized workflow routines for startup deployment structures, and implementing predictive semantic caching configurations."
+            title: "Full-Stack Developer & AI Systems Engineer",
+            inst: "LiftUpLabs & Open Source",
+            desc: "Architecting full-stack web applications, microservices pipelines, specialized workflow routines for startup deployment, and implementing predictive semantic caching configurations."
         },
         {
             time: "2025",
-            title: "AI, Advanced Data Structures & Machine Learning",
-            inst: "Independent Development",
-            desc: "Focused on learning artificial intelligence, advanced data structures (ADS), and machine learning (ML) models. Immersed in agentic AI frameworks, LangChain, vector databases, and algorithmic optimization routines to build predictive telemetry systems."
+            title: "AI, Machine Learning & Advanced Data Structures",
+            inst: "Independent Engineering & Projects",
+            desc: "Focused on agentic AI frameworks (LangChain, Ollama), vector databases (ChromaDB), and algorithmic optimization to build intelligent assistants and predictive analytics applications."
         },
         {
             time: "2024",
-            title: "Full-Stack Foundations & Engineering",
-            inst: "Personal Growth & Self-Learning",
-            desc: "Mastered full-stack development patterns (React, Node.js, databases). Created initial web interfaces, studied system design fundamentals, and built independent tools to solidify software engineering basics."
+            title: "Full-Stack Web Foundations",
+            inst: "Undergraduate Engineering ('27)",
+            desc: "Mastered core full-stack engineering principles with React, Node.js, Express, PostgreSQL, and MongoDB. Built responsive interfaces and REST APIs."
         },
         {
             time: "2023",
-            title: "Algorithmic & Coding Basics",
-            inst: "Academic & Personal Growth",
-            desc: "Focused on core data structures, algorithms, and object-oriented design. Built small utility scripts and focused on writing clean, structured code as a foundation."
+            title: "Programming & Data Science Foundations",
+            inst: "Academic Journey",
+            desc: "Started deep dive into Python, C/C++, core algorithms, data structures, and statistical data analysis."
         }
     ];
 
@@ -38,6 +38,7 @@ document.addEventListener('DOMContentLoaded', () => {
             </div>
         </div>
     `).join('');
+
     if (typeof lucide !== 'undefined') {
         lucide.createIcons();
     }

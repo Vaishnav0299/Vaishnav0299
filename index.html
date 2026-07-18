@@ -3,12 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vaishnav Gaware | Developer OS</title>
+    <title>Vaishnav Gaware | Full-Stack & AI Developer</title>
+    <meta name="description" content="Portfolio of Vaishnav Gaware - AI & Data Science Undergraduate, Full-Stack Developer, and ML Engineer building scalable web applications and agentic AI systems.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
     <link rel="stylesheet" href="css/main.css">
-    <!-- Lucide Icons Development Script -->
+    <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 <body>
+
+    <!-- Subtle Grid Pattern Background -->
+    <div class="bg-grid-overlay"></div>
 
     <!-- Background Ambient Orbs -->
     <div class="ambient-glow">
@@ -16,17 +26,28 @@
         <div class="orb orb-2"></div>
     </div>
 
+    <!-- Toast Notification Container -->
+    <div id="toast-container" class="toast-container"></div>
+
     <!-- Navigation Header -->
     <header class="navbar">
         <div class="nav-container">
-            <a href="#" class="nav-logo">VG<span>.OS</span></a>
+            <a href="#home" class="nav-logo">
+                <span class="logo-accent">&lt;</span>VG<span class="logo-accent"> /&gt;</span>
+            </a>
             <nav class="nav-links">
                 <a href="#home" class="active">Home</a>
                 <a href="#dashboard">Dashboard</a>
                 <a href="#projects">Projects</a>
-                <a href="#timeline">Timeline</a>
+                <a href="#skills">Skills</a>
+                <a href="#timeline">Experience</a>
+                <a href="#system-terminal">Terminal</a>
             </nav>
             <div class="nav-actions">
+                <button id="cmd-k-trigger" class="cmd-k-btn" title="Open Command Palette (⌘K)">
+                    <i data-lucide="search" style="width: 14px; height: 14px;"></i>
+                    <span class="cmd-k-kbd">⌘K</span>
+                </button>
                 <button id="theme-toggle" aria-label="Toggle Theme">
                     <i data-lucide="sun" class="sun-icon"></i>
                     <i data-lucide="moon" class="moon-icon"></i>
@@ -42,33 +63,44 @@
             <div class="hero-container">
                 <div class="badge-container">
                     <span class="status-badge">
-                        <span class="pulse-dot"></span> Building Next-Gen Systems
+                        <span class="pulse-dot"></span> Available for Opportunities
                     </span>
                 </div>
                 
                 <h1 class="hero-title">
-                    Vaishnav Gaware
+                    Hi, I'm <span class="text-gradient">Vaishnav Gaware</span>
                 </h1>
                 <p class="hero-subtitle">
-                    AI Engineer & Full-Stack Developer
+                    Full-Stack AI Developer & Data Science Student
                 </p>
                 <p class="hero-description">
-                    Designing autonomous workflows, robust architectural backends, and responsive web platforms. Turning telemetry data into automated execution structures.
+                    Building high-performance web platforms, multi-agent AI systems, and automated machine learning pipelines. Focused on clean code, modern architecture, and intuitive user experiences.
                 </p>
 
                 <div class="hero-cta-group">
-                    <a href="#dashboard" class="btn btn-primary">
-                        <span>Explore Dashboard</span>
+                    <a href="#projects" class="btn btn-primary">
+                        <span>Explore Projects</span>
                         <i data-lucide="arrow-right"></i>
                     </a>
-                    <a href="#projects" class="btn btn-secondary">View Showcase</a>
+                    <button class="btn btn-secondary" id="copy-email-btn" data-email="vaishnavgaware1@gmail.com">
+                        <i data-lucide="copy" style="width: 16px; height: 16px;"></i>
+                        <span>Copy Email</span>
+                    </button>
                 </div>
 
                 <div class="social-quick-links">
-                    <a href="https://github.com/Vaishnav0299" target="_blank" aria-label="GitHub"><i data-lucide="github"></i></a>
-                    <a href="https://www.linkedin.com/in/vaishnav-gaware-107799315/" target="_blank" aria-label="LinkedIn"><i data-lucide="linkedin"></i></a>
-                    <a href="https://Vaishnav0299.github.io/Vaishnav0299/" target="_blank" aria-label="Portfolio"><i data-lucide="globe"></i></a>
-                    <a href="mailto:vaishnavgaware1@gmail.com" aria-label="Mail"><i data-lucide="mail"></i></a>
+                    <a href="https://github.com/Vaishnav0299" target="_blank" aria-label="GitHub" title="GitHub Profile">
+                        <i data-lucide="github"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/vaishnav-gaware-107799315/" target="_blank" aria-label="LinkedIn" title="LinkedIn Profile">
+                        <i data-lucide="linkedin"></i>
+                    </a>
+                    <a href="https://Vaishnav0299.github.io/Vaishnav0299/" target="_blank" aria-label="Portfolio" title="Live Website">
+                        <i data-lucide="globe"></i>
+                    </a>
+                    <a href="mailto:vaishnavgaware1@gmail.com" aria-label="Mail" title="Send Email">
+                        <i data-lucide="mail"></i>
+                    </a>
                 </div>
             </div>
         </section>
@@ -77,8 +109,8 @@
         <section id="dashboard" class="dashboard-section">
             <div class="dashboard-container">
                 <div class="section-header">
-                    <h2 class="section-title">📊 Live Engine Telemetry</h2>
-                    <p class="section-subtitle">Real-time repository statistics and metrics fetched directly via GitHub Core API.</p>
+                    <h2 class="section-title">📊 Live GitHub Telemetry</h2>
+                    <p class="section-subtitle">Real-time repository statistics synced via GitHub REST API & automated cache pipelines.</p>
                 </div>
 
                 <!-- Metric Grid Layout -->
@@ -86,11 +118,11 @@
                     <div class="metric-card" id="metric-repos">
                         <div class="card-glow"></div>
                         <div class="metric-header">
-                            <span class="metric-label">Repositories</span>
+                            <span class="metric-label">Public Repositories</span>
                             <i data-lucide="package" class="metric-icon"></i>
                         </div>
                         <div class="metric-value">--</div>
-                        <div class="metric-footer">Public codebases</div>
+                        <div class="metric-footer">Open source codebases</div>
                     </div>
 
                     <div class="metric-card" id="metric-stars">
@@ -110,7 +142,7 @@
                             <i data-lucide="users" class="metric-icon"></i>
                         </div>
                         <div class="metric-value">--</div>
-                        <div class="metric-footer">Network expansion</div>
+                        <div class="metric-footer">GitHub connections</div>
                     </div>
 
                     <div class="metric-card" id="metric-gists">
@@ -120,33 +152,32 @@
                             <i data-lucide="code-2" class="metric-icon"></i>
                         </div>
                         <div class="metric-value">--</div>
-                        <div class="metric-footer">Code snippets mapped</div>
+                        <div class="metric-footer">Snippets & utilities</div>
                     </div>
                 </div>
 
                 <!-- Telemetry Visualizations -->
-                <div class="telemetry-visualizations" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1.5rem; margin-bottom: 4rem;">
-                    <div class="visualization-card" style="background-color: var(--bg-surface); border: 1px solid var(--border-color); padding: 1.5rem; border-radius: 1rem; backdrop-filter: blur(10px); display: flex; flex-direction: column;">
-                        <h3 style="font-size: 1.15rem; margin-bottom: 1rem; color: var(--text-primary); display: flex; align-items: center; gap: 0.5rem;"><i data-lucide="git-commit" style="color: var(--accent-primary); width: 20px; height: 20px;"></i> Commit Contribution Graph</h3>
-                        <div style="flex-grow: 1; display: flex; align-items: center; justify-content: center;">
-                            <img src="https://github-readme-activity-graph.vercel.app/graph?username=Vaishnav0299&bg_color=00000000&color=a855f7&line=3b82f6&point=a855f7&area=true&hide_border=true&hide_title=true" alt="Commit Activity Graph" style="width: 100%; max-width: 100%; height: auto; border-radius: 8px;" />
+                <div class="telemetry-visualizations">
+                    <div class="visualization-card">
+                        <h3><i data-lucide="git-commit"></i> Commit Contribution Activity</h3>
+                        <div class="viz-img-wrapper">
+                            <img src="https://github-readme-activity-graph.vercel.app/graph?username=Vaishnav0299&bg_color=00000000&color=a855f7&line=3b82f6&point=a855f7&area=true&hide_border=true&hide_title=true" alt="Commit Activity Graph" />
                         </div>
                     </div>
-                    <div class="visualization-card" style="background-color: var(--bg-surface); border: 1px solid var(--border-color); padding: 1.5rem; border-radius: 1rem; backdrop-filter: blur(10px); display: flex; flex-direction: column;">
-                        <h3 style="font-size: 1.15rem; margin-bottom: 1rem; color: var(--text-primary); display: flex; align-items: center; gap: 0.5rem;"><i data-lucide="pie-chart" style="color: var(--accent-secondary); width: 20px; height: 20px;"></i> Language Distribution</h3>
-                        <div style="flex-grow: 1; display: flex; align-items: center; justify-content: center;">
-                            <img src="https://github-stats-extended.vercel.app/api/top-langs/?username=Vaishnav0299&layout=compact&theme=transparent&hide_border=true&title_color=a855f7&text_color=a1a1aa&icon_color=3b82f6&hide_title=true" alt="Most Used Languages" style="width: 100%; max-width: 100%; height: auto;" />
+                    <div class="visualization-card">
+                        <h3><i data-lucide="pie-chart"></i> Top Languages & Tech Stack</h3>
+                        <div class="viz-img-wrapper">
+                            <img src="https://github-stats-extended.vercel.app/api/top-langs/?username=Vaishnav0299&layout=compact&theme=transparent&hide_border=true&title_color=a855f7&text_color=a1a1aa&icon_color=3b82f6&hide_title=true" alt="Most Used Languages" />
                         </div>
                     </div>
                 </div>
 
                 <!-- Repository Explorer Grid -->
                 <div class="repo-explorer-header">
-                    <h3>Active Repositories</h3>
+                    <h3>Pinned & Recent Repositories</h3>
                     <span class="sync-timestamp" id="sync-time">Syncing status...</span>
                 </div>
                 <div class="repo-grid" id="repo-showcase-container">
-                    <!-- Dynamic Injection Profile cards append here -->
                     <div class="skeleton-card"></div>
                     <div class="skeleton-card"></div>
                 </div>
@@ -156,19 +187,28 @@
         <!-- Showcase Portfolio Section -->
         <section id="projects" class="projects-section">
             <div class="section-header">
-                <h2 class="section-title">🤖 Production Pipeline & AI Models</h2>
-                <p class="section-subtitle">A curation of production-grade systems, automated workflows, and agentic integrations.</p>
+                <h2 class="section-title">🚀 Featured Projects</h2>
+                <p class="section-subtitle">Production-grade web applications, AI models, and automated data pipelines.</p>
             </div>
+
+            <!-- Category Filter Controls -->
+            <div class="project-filter-bar">
+                <button class="filter-btn active" data-filter="all">All Projects</button>
+                <button class="filter-btn" data-filter="fullstack">Full-Stack</button>
+                <button class="filter-btn" data-filter="ai">AI & Agents</button>
+                <button class="filter-btn" data-filter="datascience">Data Science</button>
+            </div>
+
             <div class="projects-grid" id="portfolio-project-grid">
-                <!-- Statically curated high-tier projects inject here -->
+                <!-- Dynamic Projects populate here -->
             </div>
         </section>
 
         <!-- Interactive Skills Section -->
         <section id="skills" class="skills-section">
             <div class="section-header">
-                <h2 class="section-title">⚡ Engine Capability Matrix</h2>
-                <p class="section-subtitle">Quantified expertise vectors across frontend, infrastructure, and artificial intelligence domains.</p>
+                <h2 class="section-title">🛠️ Technical Expertise</h2>
+                <p class="section-subtitle">Technologies, frameworks, and core competencies I work with daily.</p>
             </div>
             <div class="skills-grid" id="skills-matrix-grid">
                 <!-- Skill groups inject here -->
@@ -178,19 +218,19 @@
         <!-- Experience Timeline Section -->
         <section id="timeline" class="timeline-section">
             <div class="section-header">
-                <h2 class="section-title">⏳ Architectural Milestones</h2>
-                <p class="section-subtitle">Chronological sequence of technical development, engineering roles, and system builds.</p>
+                <h2 class="section-title">💼 Career & Education</h2>
+                <p class="section-subtitle">Engineering experience, academic milestones, and open-source contributions.</p>
             </div>
             <div class="timeline-container" id="vertical-timeline">
                 <!-- Timeline milestones inject here -->
             </div>
         </section>
 
-        <!-- Terminal & Real-Time System Logs -->
+        <!-- Interactive Developer Terminal Section -->
         <section id="system-terminal" class="terminal-section">
             <div class="section-header">
-                <h2 class="section-title">🖥️ Runtime Activity Logs</h2>
-                <p class="section-subtitle">Simulated workflow execution pipelines mapping out ongoing engineering threads.</p>
+                <h2 class="section-title">🖥️ Interactive Developer Terminal</h2>
+                <p class="section-subtitle">Type commands below or click quick shortcuts to interact with the environment.</p>
             </div>
             
             <div class="terminal-mock">
@@ -200,17 +240,101 @@
                         <span class="dot yellow"></span>
                         <span class="dot green"></span>
                     </div>
-                    <span class="terminal-title-text">vaishnav@developer-os:~</span>
+                    <span class="terminal-title-text">vaishnav@dev-os:~</span>
+                    <div class="terminal-actions">
+                        <button class="term-btn" id="term-clear-btn" title="Clear Terminal"><i data-lucide="trash-2"></i></button>
+                    </div>
                 </div>
+
+                <!-- Quick Action Command Chips -->
+                <div class="terminal-quick-chips">
+                    <span class="chip-label">Quick Commands:</span>
+                    <button class="term-chip" data-cmd="help">help</button>
+                    <button class="term-chip" data-cmd="skills">skills</button>
+                    <button class="term-chip" data-cmd="projects">projects</button>
+                    <button class="term-chip" data-cmd="contact">contact</button>
+                    <button class="term-chip" data-cmd="clear">clear</button>
+                </div>
+
                 <div class="terminal-body" id="interactive-terminal-logs">
-                    <div class="log-line text-accent">> initializing core portfolio analytics engine...</div>
-                    <div class="log-line">> system state nominal. local telemetry cache validated successfully.</div>
+                    <div class="log-line text-accent">> Welcome to Vaishnav Gaware's Interactive CLI (v2.4).</div>
+                    <div class="log-line">> Type <span class="cmd-highlight">'help'</span> to see available commands or click a chip above.</div>
+                </div>
+
+                <div class="terminal-input-row">
+                    <span class="term-prompt">vaishnav@dev-os:~$</span>
+                    <input type="text" id="terminal-input" placeholder="Type a command (e.g. help, skills, projects, contact)..." autocomplete="off" spellcheck="false" />
                 </div>
             </div>
         </section>
     </main>
 
-    <!-- Script Execution Pipelines -->
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <p>© 2026 Vaishnav Gaware. Built with HTML, CSS, & Vanilla JS.</p>
+            <div class="footer-links">
+                <a href="https://github.com/Vaishnav0299" target="_blank"><i data-lucide="github"></i> GitHub</a>
+                <a href="https://www.linkedin.com/in/vaishnav-gaware-107799315/" target="_blank"><i data-lucide="linkedin"></i> LinkedIn</a>
+                <a href="mailto:vaishnavgaware1@gmail.com"><i data-lucide="mail"></i> Email</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Command Palette Modal (⌘K) -->
+    <div id="cmd-palette-modal" class="cmd-modal-backdrop">
+        <div class="cmd-modal">
+            <div class="cmd-header">
+                <i data-lucide="search" class="cmd-search-icon"></i>
+                <input type="text" id="cmd-search-input" placeholder="Type a command or section..." autocomplete="off" />
+                <span class="cmd-esc-badge">ESC</span>
+            </div>
+            <div class="cmd-list" id="cmd-options-list">
+                <div class="cmd-item" data-action="nav" data-target="#home">
+                    <i data-lucide="home"></i>
+                    <span>Go to Home</span>
+                    <span class="cmd-key">#home</span>
+                </div>
+                <div class="cmd-item" data-action="nav" data-target="#dashboard">
+                    <i data-lucide="bar-chart-2"></i>
+                    <span>Go to Telemetry Dashboard</span>
+                    <span class="cmd-key">#dashboard</span>
+                </div>
+                <div class="cmd-item" data-action="nav" data-target="#projects">
+                    <i data-lucide="folder-git-2"></i>
+                    <span>View Projects</span>
+                    <span class="cmd-key">#projects</span>
+                </div>
+                <div class="cmd-item" data-action="nav" data-target="#skills">
+                    <i data-lucide="cpu"></i>
+                    <span>View Skills & Tech Stack</span>
+                    <span class="cmd-key">#skills</span>
+                </div>
+                <div class="cmd-item" data-action="nav" data-target="#timeline">
+                    <i data-lucide="briefcase"></i>
+                    <span>View Experience & Education</span>
+                    <span class="cmd-key">#timeline</span>
+                </div>
+                <div class="cmd-item" data-action="nav" data-target="#system-terminal">
+                    <i data-lucide="terminal"></i>
+                    <span>Open Developer Terminal</span>
+                    <span class="cmd-key">#terminal</span>
+                </div>
+                <div class="cmd-item" data-action="external" data-target="https://github.com/Vaishnav0299">
+                    <i data-lucide="github"></i>
+                    <span>Open GitHub Profile</span>
+                    <span class="cmd-key">↗</span>
+                </div>
+                <div class="cmd-item" data-action="external" data-target="https://www.linkedin.com/in/vaishnav-gaware-107799315/">
+                    <i data-lucide="linkedin"></i>
+                    <span>Open LinkedIn Profile</span>
+                    <span class="cmd-key">↗</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
     <script src="js/github-api.js"></script>
     <script src="js/dashboard.js"></script>
     <script src="js/projects.js"></script>

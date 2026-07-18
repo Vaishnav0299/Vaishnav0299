@@ -3,31 +3,54 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const skillsData = [
         {
-            category: "Frontend Architectures",
-            items: [{ name: "React / Next.js", val: "95%" }, { name: "Tailwind CSS", val: "90%" }, { name: "HTML5 / CSS3", val: "95%" }]
+            category: "Frontend Architecture",
+            icon: "layout",
+            items: [
+                { name: "React.js / Next.js", val: "95%" },
+                { name: "TypeScript / JavaScript", val: "92%" },
+                { name: "Tailwind CSS / HTML5 / CSS3", val: "95%" }
+            ]
         },
         {
-            category: "Backend & Systems",
-            items: [{ name: "Node.js / Hono / Express", val: "90%" }, { name: "PostgreSQL / MongoDB", val: "87%" }, { name: "REST / GraphQL APIs", val: "90%" }]
+            category: "Backend & Cloud APIs",
+            icon: "server",
+            items: [
+                { name: "Node.js / Express / Hono", val: "90%" },
+                { name: "Python / FastAPI", val: "92%" },
+                { name: "RESTful & GraphQL APIs", val: "88%" }
+            ]
         },
         {
-            category: "AI & Automation Infrastructure",
-            items: [{ name: "Python / TensorFlow", val: "92%" }, { name: "LangChain / Ollama", val: "88%" }, { name: "Docker / CI/CD Actions", val: "80%" }]
+            category: "Databases & Infrastructure",
+            icon: "database",
+            items: [
+                { name: "PostgreSQL / MongoDB", val: "88%" },
+                { name: "Vector DBs (ChromaDB / Redis)", val: "85%" },
+                { name: "Docker / CI/CD Actions / AWS", val: "82%" }
+            ]
         },
         {
-            category: "Data Science & Analytics",
-            items: [{ name: "Pandas / NumPy", val: "90%" }, { name: "Scikit-Learn / ML", val: "88%" }, { name: "Data Visualization & Jupyter", val: "85%" }]
+            category: "AI, ML & Data Science",
+            icon: "cpu",
+            items: [
+                { name: "LangChain / Ollama Multi-Agent", val: "90%" },
+                { name: "Scikit-Learn / TensorFlow", val: "86%" },
+                { name: "Pandas / NumPy / Jupyter EDA", val: "92%" }
+            ]
         }
     ];
 
     skillsGrid.innerHTML = skillsData.map(cat => `
         <div class="skill-category-card">
-            <h3>${cat.category}</h3>
+            <h3>
+                <i data-lucide="${cat.icon}" style="width: 18px; height: 18px; color: var(--accent-primary);"></i>
+                ${cat.category}
+            </h3>
             ${cat.items.map(s => `
                 <div class="skill-bar-container">
                     <div class="skill-info">
                         <span>${s.name}</span>
-                        <span>${s.val}</span>
+                        <span style="font-family: var(--font-mono); color: var(--text-muted);">${s.val}</span>
                     </div>
                     <div class="skill-track">
                         <div class="skill-fill" data-percentage="${s.val}"></div>
@@ -37,7 +60,11 @@ document.addEventListener('DOMContentLoaded', () => {
         </div>
     `).join('');
 
-    // Progressive Intersection Animation Controller
+    if (typeof lucide !== 'undefined') {
+        lucide.createIcons();
+    }
+
+    // Progressive Fill Animation on Scroll
     const triggerFillAnimations = (entries, observer) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {

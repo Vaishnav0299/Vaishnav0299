@@ -1,46 +1,138 @@
 /**
- * GitHub Developer OS - Premium Polish Controller
- * Handles live event logs simulations and scroll-state section mappings.
+ * GitHub Developer OS - Interactive Terminal Engine & UI Polish
  */
 document.addEventListener('DOMContentLoaded', () => {
     
-    // --- Part 1: Automated Live Activity Log Terminal Simulator ---
+    // --- Interactive Terminal Shell Engine ---
     const terminalBody = document.getElementById('interactive-terminal-logs');
-    
-    const loggingSequences = [
-        "🔄 sync task dispatched: fetching github-actions static dataset...",
-        "💾 repository mapping compiled: local cached dependencies locked.",
-        "📊 calculating global productivity vector... matrix parameters standard.",
-        "🤖 processing artificial intelligence modules... agentic models active.",
-        "⚡ checking thread runtime stability... 0 compilation warning anomalies discovered.",
-        "🟢 dev-os terminal online. telemetry pipeline monitoring continues."
-    ];
+    const terminalInput = document.getElementById('terminal-input');
+    const clearBtn = document.getElementById('term-clear-btn');
+    const quickChips = document.querySelectorAll('.term-chip');
 
-    let chronologicalIndex = 0;
+    const commandRegistry = {
+        'help': () => [
+            "Available Commands:",
+            "  <span class='cmd-highlight'>skills</span>    - List core technical stack & frameworks",
+            "  <span class='cmd-highlight'>projects</span>  - Display featured production repositories",
+            "  <span class='cmd-highlight'>contact</span>   - Show email and social profiles",
+            "  <span class='cmd-highlight'>bio</span>       - Brief developer summary",
+            "  <span class='cmd-highlight'>github</span>    - Open GitHub profile",
+            "  <span class='cmd-highlight'>linkedin</span>  - Open LinkedIn profile",
+            "  <span class='cmd-highlight'>theme</span>     - Toggle dark/light theme",
+            "  <span class='cmd-highlight'>date</span>      - Print current UTC time",
+            "  <span class='cmd-highlight'>clear</span>     - Clear terminal logs"
+        ],
+        'skills': () => [
+            "⚡ Technical Expertise Stack:",
+            "  • Frontend : React, Next.js, TypeScript, Tailwind CSS, HTML5/CSS3",
+            "  • Backend  : Node.js, Express, Hono, Python, FastAPI, REST/GraphQL",
+            "  • DB & Cloud: PostgreSQL, MongoDB, ChromaDB, Redis, Docker, AWS",
+            "  • AI & ML  : LangChain, Ollama, TensorFlow, Scikit-Learn, Pandas"
+        ],
+        'projects': () => [
+            "🚀 Featured Projects:",
+            "  1. Enterprise Management & Payroll Platform [Full-Stack]",
+            "  2. Autonomous RAG Multi-Agent Assistant [Agentic AI]",
+            "  3. AI Generative Image Orchestrator [Artificial Intelligence]",
+            "  4. Predictive Customer Churn Analytics [Data Science]"
+        ],
+        'contact': () => [
+            "📫 Contact Channels:",
+            "  • Email    : vaishnavgaware1@gmail.com",
+            "  • GitHub   : https://github.com/Vaishnav0299",
+            "  • LinkedIn : https://linkedin.com/in/vaishnav-gaware-107799315/",
+            "  • Portfolio: https://Vaishnav0299.github.io/Vaishnav0299/"
+        ],
+        'bio': () => [
+            "👨‍💻 Developer Bio:",
+            "  Vaishnav Gaware is an AI & Data Science Undergraduate ('27)",
+            "  building enterprise full-stack applications and multi-agent AI tools."
+        ],
+        'github': () => {
+            window.open("https://github.com/Vaishnav0299", "_blank");
+            return ["Opening GitHub profile in new tab..."];
+        },
+        'linkedin': () => {
+            window.open("https://www.linkedin.com/in/vaishnav-gaware-107799315/", "_blank");
+            return ["Opening LinkedIn profile in new tab..."];
+        },
+        'theme': () => {
+            const toggle = document.getElementById('theme-toggle');
+            if (toggle) toggle.click();
+            return ["Theme toggled successfully."];
+        },
+        'date': () => [
+            `Current Time: ${new Date().toUTCString()}`
+        ],
+        'whoami': () => [
+            "vaishnav@dev-os (Guest User)"
+        ],
+        'sudo': () => [
+            "Permission denied: User is not in the sudoers file. This incident will be reported."
+        ]
+    };
 
-    function streamSystemLog() {
-        if (chronologicalIndex < loggingSequences.length) {
-            const timestamp = new Date().toLocaleTimeString();
-            const logBlockMarkup = `
-                <div class="log-line">
-                    <span style="color: var(--text-muted); font-size: 0.8rem;">[${timestamp}]</span> 
-                    <span>${loggingSequences[chronologicalIndex]}</span>
-                </div>
-            `;
-            terminalBody.insertAdjacentHTML('beforeend', logBlockMarkup);
-            
-            // Auto-scroll the terminal view to the latest entry
-            terminalBody.scrollTop = terminalBody.scrollHeight;
-            
-            chronologicalIndex++;
-            setTimeout(streamSystemLog, Math.random() * 2000 + 1000); // Fluid delivery interval
+    function appendOutputLines(lines, commandText = "") {
+        if (commandText) {
+            const cmdLine = document.createElement('div');
+            cmdLine.className = 'log-line';
+            cmdLine.innerHTML = `<span style="color: var(--accent-emerald); font-weight:700;">vaishnav@dev-os:~$</span> <span style="color: var(--text-primary);">${commandText}</span>`;
+            terminalBody.appendChild(cmdLine);
+        }
+
+        lines.forEach(line => {
+            const l = document.createElement('div');
+            l.className = 'log-line';
+            l.innerHTML = line;
+            terminalBody.appendChild(l);
+        });
+
+        terminalBody.scrollTop = terminalBody.scrollHeight;
+    }
+
+    function processCommand(rawInput) {
+        const cmd = rawInput.trim().toLowerCase();
+        if (!cmd) return;
+
+        if (cmd === 'clear') {
+            terminalBody.innerHTML = `<div class="log-line text-accent">> Terminal session cleared. Type 'help' for commands.</div>`;
+            return;
+        }
+
+        if (commandRegistry[cmd]) {
+            const output = commandRegistry[cmd]();
+            appendOutputLines(output, cmd);
+        } else {
+            appendOutputLines([
+                `<span style="color: #ef4444;">zsh: command not found: ${cmd}</span>. Type <span class='cmd-highlight'>'help'</span> for available commands.`
+            ], cmd);
         }
     }
 
-    // Fire up terminal stream simulation after a brief entrance pause
-    setTimeout(streamSystemLog, 1500);
+    if (terminalInput) {
+        terminalInput.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter') {
+                const text = terminalInput.value;
+                terminalInput.value = '';
+                processCommand(text);
+            }
+        });
+    }
 
-    // --- Part 2: High-Performance Active Section Nav Track Mapping ---
+    if (clearBtn) {
+        clearBtn.addEventListener('click', () => {
+            terminalBody.innerHTML = `<div class="log-line text-accent">> Terminal cleared.</div>`;
+        });
+    }
+
+    quickChips.forEach(chip => {
+        chip.addEventListener('click', () => {
+            const cmd = chip.getAttribute('data-cmd');
+            if (cmd) processCommand(cmd);
+        });
+    });
+
+    // --- Active Section Scroll Observer ---
     const operationalSections = document.querySelectorAll('section[id]');
     const systemNavigationLinks = document.querySelectorAll('.nav-links a');
 
@@ -48,7 +140,6 @@ document.addEventListener('DOMContentLoaded', () => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 const activeSectionID = entry.target.getAttribute('id');
-                
                 systemNavigationLinks.forEach(link => {
                     link.classList.remove('active');
                     if (link.getAttribute('href') === `#${activeSectionID}`) {
@@ -61,7 +152,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const sectionLinkObserver = new IntersectionObserver(updateActiveNavTabState, {
         root: null,
-        threshold: 0.35, // Trigger state swap when 35% of the section enters the frame
+        threshold: 0.25,
         rootMargin: "-10% 0px -40% 0px"
     });
 

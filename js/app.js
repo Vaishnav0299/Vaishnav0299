@@ -1,16 +1,49 @@
 /**
- * Developer OS - Core Application Runner
- * Synchronizes layout setups, theme adjustments, and runtime controls.
+ * Developer OS - Core Application Runner & Interactivity Layer
  */
 document.addEventListener('DOMContentLoaded', () => {
-    console.log("Developer OS Framework: Core initialized successfully.");
 
-    // Validate and trigger global lucide vector icon structures
+    // Lucide Icons Initialization
     if (typeof lucide !== 'undefined') {
         lucide.createIcons();
     }
 
-    // Theme Engine Configurations
+    // --- 1. Toast Notification System ---
+    const toastContainer = document.getElementById('toast-container');
+
+    function showToast(message, iconName = 'check-circle') {
+        if (!toastContainer) return;
+        const toast = document.createElement('div');
+        toast.className = 'toast';
+        toast.innerHTML = `<i data-lucide="${iconName}" style="width: 18px; height: 18px; color: var(--accent-primary);"></i> <span>${message}</span>`;
+        toastContainer.appendChild(toast);
+        
+        if (typeof lucide !== 'undefined') {
+            lucide.createIcons();
+        }
+
+        setTimeout(() => {
+            toast.style.opacity = '0';
+            toast.style.transform = 'translateY(10px)';
+            toast.style.transition = 'all 0.3s ease';
+            setTimeout(() => toast.remove(), 300);
+        }, 3000);
+    }
+
+    // --- 2. Copy Email Button Handler ---
+    const copyEmailBtn = document.getElementById('copy-email-btn');
+    if (copyEmailBtn) {
+        copyEmailBtn.addEventListener('click', () => {
+            const email = copyEmailBtn.getAttribute('data-email') || "vaishnavgaware1@gmail.com";
+            navigator.clipboard.writeText(email).then(() => {
+                showToast(`Copied ${email} to clipboard!`, 'copy');
+            }).catch(() => {
+                showToast(`Email: ${email}`, 'mail');
+            });
+        });
+    }
+
+    // --- 3. Theme Engine Configurations ---
     const themeToggle = document.getElementById('theme-toggle');
     const htmlElement = document.documentElement;
 
@@ -18,7 +51,6 @@ document.addEventListener('DOMContentLoaded', () => {
         const getSystemTheme = () => window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
         const savedTheme = localStorage.getItem('os-theme') || getSystemTheme();
         
-        // Set Initial Architectural State
         htmlElement.setAttribute('data-theme', savedTheme);
 
         themeToggle.addEventListener('click', () => {
@@ -27,30 +59,118 @@ document.addEventListener('DOMContentLoaded', () => {
             
             htmlElement.setAttribute('data-theme', nextTheme);
             localStorage.setItem('os-theme', nextTheme);
+            showToast(`Theme switched to ${nextTheme} mode`, nextTheme === 'dark' ? 'moon' : 'sun');
         });
     }
 
-    // Intercept navbar link click actions for smooth scrolling offsets
-    const navigationActionAnchors = document.querySelectorAll('.nav-links a, .nav-actions .btn, .hero-cta-group .btn');
+    // --- 4. Smooth Anchor Link Offsets ---
+    const navigationActionAnchors = document.querySelectorAll('a[href^="#"]');
     
     navigationActionAnchors.forEach(anchor => {
         anchor.addEventListener('click', function(event) {
-            const URLTargetID = this.getAttribute('href');
-            
-            // Confirm target parameter is an ID scroll reference vector
-            if (URLTargetID && URLTargetID.startsWith('#')) {
+            const targetID = this.getAttribute('href');
+            if (targetID && targetID.startsWith('#') && targetID.length > 1) {
                 event.preventDefault();
-                const actualTargetNode = document.querySelector(URLTargetID);
+                const actualTargetNode = document.querySelector(targetID);
                 
                 if (actualTargetNode) {
-                    const navigationHeaderHeight = document.querySelector('.navbar').offsetHeight;
-                    const calculatedTargetPosition = actualTargetNode.offsetTop - navigationHeaderHeight;
+                    const navHeaderHeight = document.querySelector('.navbar')?.offsetHeight || 70;
+                    const targetPosition = actualTargetNode.offsetTop - navHeaderHeight;
 
                     window.scrollTo({
-                        top: calculatedTargetPosition,
+                        top: targetPosition,
                         behavior: 'smooth'
                     });
                 }
+            }
+        });
+    });
+
+    // --- 5. Command Palette (⌘K) Modal Engine ---
+    const cmdModal = document.getElementById('cmd-palette-modal');
+    const cmdTrigger = document.getElementById('cmd-k-trigger');
+    const cmdInput = document.getElementById('cmd-search-input');
+    const cmdList = document.getElementById('cmd-options-list');
+    const cmdItems = document.querySelectorAll('.cmd-item');
+
+    function openCmdModal() {
+        if (cmdModal) {
+            cmdModal.classList.add('active');
+            if (cmdInput) {
+                cmdInput.value = '';
+                filterCmdItems('');
+                cmdInput.focus();
+            }
+        }
+    }
+
+    function closeCmdModal() {
+        if (cmdModal) {
+            cmdModal.classList.remove('active');
+        }
+    }
+
+    function filterCmdItems(query) {
+        const q = query.toLowerCase().trim();
+        cmdItems.forEach(item => {
+            const text = item.textContent.toLowerCase();
+            if (text.includes(q)) {
+                item.style.display = 'flex';
+            } else {
+                item.style.display = 'none';
+            }
+        });
+    }
+
+    if (cmdTrigger) {
+        cmdTrigger.addEventListener('click', openCmdModal);
+    }
+
+    if (cmdModal) {
+        cmdModal.addEventListener('click', (e) => {
+            if (e.target === cmdModal) closeCmdModal();
+        });
+    }
+
+    if (cmdInput) {
+        cmdInput.addEventListener('input', (e) => {
+            filterCmdItems(e.target.value);
+        });
+    }
+
+    // Hotkey Listener for Ctrl+K or Cmd+K / ESC
+    document.addEventListener('keydown', (e) => {
+        if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === 'k') {
+            e.preventDefault();
+            if (cmdModal.classList.contains('active')) {
+                closeCmdModal();
+            } else {
+                openCmdModal();
+            }
+        }
+        if (e.key === 'Escape' && cmdModal && cmdModal.classList.contains('active')) {
+            closeCmdModal();
+        }
+    });
+
+    // Handle Item Selection inside Command Palette
+    cmdItems.forEach(item => {
+        item.addEventListener('click', () => {
+            const action = item.getAttribute('data-action');
+            const target = item.getAttribute('data-target');
+            closeCmdModal();
+
+            if (action === 'nav' && target) {
+                const targetNode = document.querySelector(target);
+                if (targetNode) {
+                    const navHeight = document.querySelector('.navbar')?.offsetHeight || 70;
+                    window.scrollTo({
+                        top: targetNode.offsetTop - navHeight,
+                        behavior: 'smooth'
+                    });
+                }
+            } else if (action === 'external' && target) {
+                window.open(target, '_blank');
             }
         });
     });
