@@ -1,5 +1,5 @@
 import React from 'react';
-import { User, GraduationCap, MapPin, Target, CheckCircle2, Download, Mail } from 'lucide-react';
+import { GraduationCap, MapPin, Mail } from 'lucide-react';
 import { aboutData } from '../data/portfolioData';
 
 export function About() {
@@ -10,17 +10,10 @@ export function About() {
         <p class="section-subtitle">Background, education, core technical interests, and career objectives.</p>
       </div>
 
-      <div class="about-grid">
-        {/* Left Column: Avatar & Profile Overview Card */}
-        <div class="about-card profile-card">
-          <div class="about-avatar-wrapper">
-            <img src={aboutData.avatarUrl} alt={aboutData.name} class="about-avatar-img" />
-            <div class="avatar-glow-ring"></div>
-          </div>
-          <h3 class="about-name">{aboutData.name}</h3>
-          <p class="about-role">{aboutData.title}</p>
-          
-          <div class="about-meta-list">
+      <div class="about-cards-column">
+        {/* Meta Info Row */}
+        <div class="about-card bio-card">
+          <div class="about-meta-list" style={{ flexDirection: 'row', flexWrap: 'wrap', gap: '1.25rem' }}>
             <div class="about-meta-item">
               <GraduationCap style={{ width: 18, height: 18, color: 'var(--accent-primary)' }} />
               <span>{aboutData.education}</span>
@@ -34,21 +27,11 @@ export function About() {
               <a href={`mailto:${aboutData.email}`} style={{ color: 'var(--text-secondary)', textDecoration: 'none' }}>{aboutData.email}</a>
             </div>
           </div>
-
-          <div style={{ marginTop: '1.75rem', width: '100%' }}>
-            <a href={aboutData.github} target="_blank" rel="noreferrer" class="btn btn-secondary btn-sm" style={{ width: '100%', justifyContent: 'center' }}>
-              <Download style={{ width: 16, height: 16 }} /> Download Resume
-            </a>
-          </div>
+          <h3 style={{ marginTop: '1.25rem' }}>Short Bio</h3>
+          <p>{aboutData.bio}</p>
         </div>
 
-        {/* Right Column: Bio, Core Focus & What I'm Looking For */}
-        <div class="about-content-column">
-          <div class="about-card bio-card">
-            <h3>Short Bio</h3>
-            <p>{aboutData.bio}</p>
-          </div>
-
+        <div class="about-two-col">
           <div class="about-card interests-card">
             <h3>Core Technical Interests</h3>
             <ul class="interests-list">
