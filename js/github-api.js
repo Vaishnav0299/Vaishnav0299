@@ -34,13 +34,14 @@ class GitHubAPIEngine {
         try {
             const [profileRes, reposRes] = await Promise.all([
                 fetch(`${this.baseUrl}/users/${this.username}`),
-                fetch(`${this.baseUrl}/users/${this.username}/repos?sort=updated&per_page=30`)
+                fetch(`${this.baseUrl}/users/${this.username}/repos?type=public&sort=updated&per_page=30`)
             ]);
 
             if (!profileRes.ok || !reposRes.ok) throw new Error("Network pool degradation.");
 
             const profile = await profileRes.json();
-            const repos = await reposRes.json();
+            const rawRepos = await reposRes.json();
+            const repos = Array.isArray(rawRepos) ? rawRepos.filter(r => !r.private) : [];
 
             return {
                 profile: profile,

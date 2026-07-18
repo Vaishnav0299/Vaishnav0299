@@ -23,8 +23,11 @@ document.addEventListener('DOMContentLoaded', async () => {
         followerCountNode.textContent = profile.followers || 0;
         gistCountNode.textContent = profile.public_gists || 0;
 
-        // Calculate aggregate community stars
-        const totalCalculatedStars = repos.reduce((acc, cr) => acc + (cr.stargazers_count || 0), 0);
+        // Filter out private repositories and profile readme repo
+        const publicReposOnly = repos.filter(r => !r.private && r.name !== 'Vaishnav0299');
+
+        // Calculate aggregate community stars for public repos
+        const totalCalculatedStars = publicReposOnly.reduce((acc, cr) => acc + (cr.stargazers_count || 0), 0);
         starCountNode.textContent = totalCalculatedStars;
 
         // Process Synchronization Date Label
@@ -33,7 +36,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
         // Clear layout skeletons and build repo cards
         repoContainer.innerHTML = '';
-        const eliteSelection = repos.filter(r => r.name !== 'Vaishnav0299').slice(0, 6);
+        const eliteSelection = publicReposOnly.slice(0, 6);
 
         eliteSelection.forEach(repo => {
             const projectCardMarkup = `
