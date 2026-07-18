@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
             desc: "Enterprise-ready collaborative real-time workspace application integrating workspaces, kanban boards, collaborative documents, presence indicators, and administrative audit panels.",
             stack: ["TypeScript", "React", "Next.js", "Tailwind CSS", "Node.js"],
             github: "https://github.com/Vaishnav0299/Productivity-Pro",
-            live: "https://productivity-pro-bay.vercel.app"
+            live: null
         },
         {
             id: 2,
@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
             desc: "An intelligent study platform designed for note organization, automated flashcards generation, topic summaries, and interactive learning workflows.",
             stack: ["JavaScript", "React", "Node.js", "AI API", "Tailwind CSS"],
             github: "https://github.com/Vaishnav0299/my-study-assistant",
-            live: "https://my-study-assistant-ten.vercel.app"
+            live: null
         },
         {
             id: 3,
@@ -83,13 +83,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 </div>
                 <div class="project-actions" style="margin-top: 1rem; display: flex; gap: 0.75rem;">
                     <a href="${proj.github}" target="_blank" class="btn btn-secondary btn-sm" style="display: inline-flex; align-items: center; gap: 0.4rem; border-radius: 6px;">
-                        <i data-lucide="github" style="width: 14px; height: 14px;"></i> Code
+                        <i data-lucide="github" style="width: 14px; height: 14px;"></i> GitHub
                     </a>
-                    ${proj.live ? `
-                    <a href="${proj.live}" target="_blank" class="btn btn-secondary btn-sm" style="display: inline-flex; align-items: center; gap: 0.4rem; border-radius: 6px;">
-                        <i data-lucide="external-link" style="width: 14px; height: 14px;"></i> Live Demo
-                    </a>
-                    ` : ''}
                 </div>
             </div>
         `).join('');

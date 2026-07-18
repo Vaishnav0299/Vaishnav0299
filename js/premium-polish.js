@@ -30,9 +30,9 @@ document.addEventListener('DOMContentLoaded', () => {
             "  • AI & ML  : LangChain, Ollama, TensorFlow, Scikit-Learn, Pandas"
         ],
         'projects': () => [
-            "🚀 Featured Repositories & Live Demos:",
-            "  1. Productivity-Pro [Live Demo: https://productivity-pro-bay.vercel.app]",
-            "  2. My Study Assistant [Live Demo: https://my-study-assistant-ten.vercel.app]",
+            "🚀 Featured Public Repositories:",
+            "  1. Productivity-Pro [Full-Stack Workspace App]",
+            "  2. My Study Assistant [AI Study Platform]",
             "  3. Deskify [Web Utility]",
             "  4. Form-Builder [Drag & Drop Form Engine]",
             "  5. Mentor Backend [REST API Service]"
