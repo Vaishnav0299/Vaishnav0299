@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowRight, Download, Github, Linkedin, Globe, Mail } from 'lucide-react';
+import { ArrowRight, Github, Linkedin, Mail } from 'lucide-react';
 import { aboutData } from '../data/portfolioData';
 
 export function Hero() {
@@ -46,9 +46,9 @@ export function Hero() {
             <span>Explore Projects</span>
             <ArrowRight style={{ width: 18, height: 18 }} />
           </a>
-          <a href={aboutData.github} target="_blank" rel="noreferrer" class="btn btn-secondary">
-            <Download style={{ width: 18, height: 18 }} />
-            <span>Download Resume</span>
+          <a href="#contact" class="btn btn-secondary">
+            <Mail style={{ width: 18, height: 18 }} />
+            <span>Get In Touch</span>
           </a>
         </div>
 
@@ -58,9 +58,6 @@ export function Hero() {
           </a>
           <a href={aboutData.linkedin} target="_blank" rel="noreferrer" aria-label="LinkedIn" title="LinkedIn Profile">
             <Linkedin style={{ width: 20, height: 20 }} />
-          </a>
-          <a href="https://Vaishnav0299.github.io/Vaishnav0299/" target="_blank" rel="noreferrer" aria-label="Portfolio" title="Live Portfolio Website">
-            <Globe style={{ width: 20, height: 20 }} />
           </a>
           <a href={`mailto:${aboutData.email}`} aria-label="Mail" title="Send Email">
             <Mail style={{ width: 20, height: 20 }} />

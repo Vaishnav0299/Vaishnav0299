@@ -1,5 +1,5 @@
 import React from 'react';
-import { Mail, Linkedin, Github, Globe } from 'lucide-react';
+import { Mail, Linkedin, Github } from 'lucide-react';
 import { aboutData } from '../data/portfolioData';
 
 export function Contact({ onShowToast }) {
@@ -34,9 +34,6 @@ export function Contact({ onShowToast }) {
               </a>
               <a href={aboutData.linkedin} target="_blank" rel="noreferrer" title="LinkedIn">
                 <Linkedin style={{ width: 20, height: 20 }} />
-              </a>
-              <a href="https://Vaishnav0299.github.io/Vaishnav0299/" target="_blank" rel="noreferrer" title="Portfolio">
-                <Globe style={{ width: 20, height: 20 }} />
               </a>
             </div>
           </div>
