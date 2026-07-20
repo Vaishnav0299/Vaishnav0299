@@ -11,7 +11,7 @@
 - 🌱 Currently learning *Distributed Systems, Kubernetes, RAG Pipelines, Multi-Agent Systems*
 - 💬 Ask me about *React.js, Next.js, Node.js, Python, FastAPI, Express, Hono, LangChain, PostgreSQL, MongoDB, Docker, AWS*
 - 👨‍🎓 AI & Data Science Undergraduate ('27)
-- 👨‍💻 Portfolio: **[https://Vaishnav0299.github.io/Vaishnav0299/](https://Vaishnav0299.github.io/Vaishnav0299/)**
+- 👨‍💻 Portfolio: **[(https://Vaishnav0299.github.io/Vaishnav0299/](https://portfolio-v1-0-rouge.vercel.app/))**
 - 📫 Reach me at **vaishnavgaware1@gmail.com**
 - ⚡ Fun Fact: I enjoy building AI-powered applications and solving real-world problems with code.
 
