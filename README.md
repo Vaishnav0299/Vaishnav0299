@@ -89,12 +89,6 @@
 
 ---
 
-### 📊 Git Telemetry & Activity Graph
-
-<div align="center">
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=Vaishnav0299&bg_color=00000000&color=a855f7&line=3b82f6&point=a855f7&area=true&hide_border=true" alt="Commit Activity Graph" width="100%" />
-</div>
-
 ---
 
 ### ⚡ Target Execution Matrix
