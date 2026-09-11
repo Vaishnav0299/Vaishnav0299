@@ -1,0 +1,141 @@
+<svg width="880" height="170" viewBox="0 0 880 170" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="sbg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1c140e"/>
+      <stop offset="100%" stop-color="#0c0a09"/>
+    </linearGradient>
+    <filter id="sglow">
+      <feGaussianBlur stdDeviation="3" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <rect width="880" height="170" rx="14" fill="url(#sbg)" stroke="#d97706" stroke-opacity="0.45"/>
+
+  <!-- Legend & Title -->
+  <text x="24" y="28" font-family="'Fira Code', monospace" font-size="12" fill="#fbbf24">🐍 Vaishnav0299 / contributions-timeline</text>
+  <g font-family="'Fira Code', monospace" font-size="11" fill="#a8a29e" transform="translate(670, 18)">
+    <text x="0" y="10">Less</text>
+    <rect x="36" y="0" width="10" height="10" rx="2" fill="#1c140e"/>
+    <rect x="50" y="0" width="10" height="10" rx="2" fill="#451a03"/>
+    <rect x="64" y="0" width="10" height="10" rx="2" fill="#78350f"/>
+    <rect x="78" y="0" width="10" height="10" rx="2" fill="#d97706"/>
+    <rect x="92" y="0" width="10" height="10" rx="2" fill="#fbbf24"/>
+    <text x="110" y="10">More</text>
+  </g>
+
+  <!-- Contribution Grid (52 weeks x 7 days) -->
+  <g transform="translate(24, 46)">
+    <!-- Simulated realistic high-activity contribution calendar -->
+    <!-- Column generator with random activity pattern in golden orange shades -->
+    <!-- Row labels -->
+    <g font-family="'Segoe UI', sans-serif" font-size="9" fill="#78716c">
+      <text x="-18" y="24">Mon</text>
+      <text x="-18" y="52">Wed</text>
+      <text x="-18" y="80">Fri</text>
+    </g>
+
+    <!-- Repeated weeks with golden contribution hues -->
+    <!-- Week 1 - 10 -->
+    <g fill="#1c140e">
+      <!-- Background empty dots across all columns -->
+      <pattern id="dotgrid" width="16" height="14" patternUnits="userSpaceOnUse">
+        <rect width="11" height="11" rx="2.5" fill="#24180f"/>
+      </pattern>
+      <rect width="832" height="98" fill="url(#dotgrid)"/>
+    </g>
+
+    <!-- Active golden contribution clusters -->
+    <!-- Week blocks -->
+    <g fill="#451a03">
+      <rect x="0" y="0" width="11" height="11" rx="2.5"/><rect x="0" y="28" width="11" height="11" rx="2.5"/>
+      <rect x="32" y="14" width="11" height="11" rx="2.5"/><rect x="64" y="0" width="11" height="11" rx="2.5"/>
+      <rect x="96" y="42" width="11" height="11" rx="2.5"/><rect x="128" y="70" width="11" height="11" rx="2.5"/>
+      <rect x="160" y="14" width="11" height="11" rx="2.5"/><rect x="192" y="0" width="11" height="11" rx="2.5"/>
+      <rect x="224" y="28" width="11" height="11" rx="2.5"/><rect x="256" y="56" width="11" height="11" rx="2.5"/>
+      <rect x="288" y="70" width="11" height="11" rx="2.5"/><rect x="320" y="14" width="11" height="11" rx="2.5"/>
+      <rect x="352" y="42" width="11" height="11" rx="2.5"/><rect x="384" y="0" width="11" height="11" rx="2.5"/>
+      <rect x="416" y="28" width="11" height="11" rx="2.5"/><rect x="448" y="56" width="11" height="11" rx="2.5"/>
+      <rect x="480" y="84" width="11" height="11" rx="2.5"/><rect x="512" y="14" width="11" height="11" rx="2.5"/>
+      <rect x="544" y="42" width="11" height="11" rx="2.5"/><rect x="576" y="70" width="11" height="11" rx="2.5"/>
+      <rect x="608" y="0" width="11" height="11" rx="2.5"/><rect x="640" y="28" width="11" height="11" rx="2.5"/>
+      <rect x="672" y="56" width="11" height="11" rx="2.5"/><rect x="704" y="14" width="11" height="11" rx="2.5"/>
+      <rect x="736" y="42" width="11" height="11" rx="2.5"/><rect x="768" y="70" width="11" height="11" rx="2.5"/>
+      <rect x="800" y="28" width="11" height="11" rx="2.5"/>
+    </g>
+
+    <g fill="#78350f">
+      <rect x="16" y="14" width="11" height="11" rx="2.5"/><rect x="16" y="42" width="11" height="11" rx="2.5"/>
+      <rect x="48" y="0" width="11" height="11" rx="2.5"/><rect x="48" y="28" width="11" height="11" rx="2.5"/>
+      <rect x="80" y="56" width="11" height="11" rx="2.5"/><rect x="112" y="14" width="11" height="11" rx="2.5"/>
+      <rect x="144" y="42" width="11" height="11" rx="2.5"/><rect x="176" y="70" width="11" height="11" rx="2.5"/>
+      <rect x="208" y="14" width="11" height="11" rx="2.5"/><rect x="240" y="42" width="11" height="11" rx="2.5"/>
+      <rect x="272" y="0" width="11" height="11" rx="2.5"/><rect x="304" y="28" width="11" height="11" rx="2.5"/>
+      <rect x="336" y="56" width="11" height="11" rx="2.5"/><rect x="368" y="84" width="11" height="11" rx="2.5"/>
+      <rect x="400" y="14" width="11" height="11" rx="2.5"/><rect x="432" y="42" width="11" height="11" rx="2.5"/>
+      <rect x="464" y="70" width="11" height="11" rx="2.5"/><rect x="496" y="0" width="11" height="11" rx="2.5"/>
+      <rect x="528" y="28" width="11" height="11" rx="2.5"/><rect x="560" y="56" width="11" height="11" rx="2.5"/>
+      <rect x="592" y="84" width="11" height="11" rx="2.5"/><rect x="624" y="14" width="11" height="11" rx="2.5"/>
+      <rect x="656" y="42" width="11" height="11" rx="2.5"/><rect x="688" y="70" width="11" height="11" rx="2.5"/>
+      <rect x="720" y="0" width="11" height="11" rx="2.5"/><rect x="752" y="28" width="11" height="11" rx="2.5"/>
+      <rect x="784" y="56" width="11" height="11" rx="2.5"/><rect x="816" y="84" width="11" height="11" rx="2.5"/>
+    </g>
+
+    <g fill="#d97706">
+      <rect x="32" y="42" width="11" height="11" rx="2.5"/><rect x="64" y="28" width="11" height="11" rx="2.5"/>
+      <rect x="96" y="14" width="11" height="11" rx="2.5"/><rect x="128" y="0" width="11" height="11" rx="2.5"/>
+      <rect x="160" y="56" width="11" height="11" rx="2.5"/><rect x="192" y="70" width="11" height="11" rx="2.5"/>
+      <rect x="224" y="42" width="11" height="11" rx="2.5"/><rect x="256" y="14" width="11" height="11" rx="2.5"/>
+      <rect x="288" y="28" width="11" height="11" rx="2.5"/><rect x="320" y="56" width="11" height="11" rx="2.5"/>
+      <rect x="352" y="70" width="11" height="11" rx="2.5"/><rect x="384" y="28" width="11" height="11" rx="2.5"/>
+      <rect x="416" y="56" width="11" height="11" rx="2.5"/><rect x="448" y="14" width="11" height="11" rx="2.5"/>
+      <rect x="480" y="42" width="11" height="11" rx="2.5"/><rect x="512" y="70" width="11" height="11" rx="2.5"/>
+      <rect x="544" y="14" width="11" height="11" rx="2.5"/><rect x="576" y="28" width="11" height="11" rx="2.5"/>
+      <rect x="608" y="56" width="11" height="11" rx="2.5"/><rect x="640" y="70" width="11" height="11" rx="2.5"/>
+      <rect x="672" y="14" width="11" height="11" rx="2.5"/><rect x="704" y="42" width="11" height="11" rx="2.5"/>
+      <rect x="736" y="70" width="11" height="11" rx="2.5"/><rect x="768" y="14" width="11" height="11" rx="2.5"/>
+      <rect x="800" y="56" width="11" height="11" rx="2.5"/>
+    </g>
+
+    <g fill="#f59e0b">
+      <rect x="48" y="42" width="11" height="11" rx="2.5"/><rect x="80" y="14" width="11" height="11" rx="2.5"/>
+      <rect x="112" y="56" width="11" height="11" rx="2.5"/><rect x="144" y="28" width="11" height="11" rx="2.5"/>
+      <rect x="176" y="0" width="11" height="11" rx="2.5"/><rect x="208" y="42" width="11" height="11" rx="2.5"/>
+      <rect x="240" y="70" width="11" height="11" rx="2.5"/><rect x="272" y="28" width="11" height="11" rx="2.5"/>
+      <rect x="304" y="56" width="11" height="11" rx="2.5"/><rect x="336" y="14" width="11" height="11" rx="2.5"/>
+      <rect x="368" y="42" width="11" height="11" rx="2.5"/><rect x="400" y="70" width="11" height="11" rx="2.5"/>
+      <rect x="432" y="14" width="11" height="11" rx="2.5"/><rect x="464" y="28" width="11" height="11" rx="2.5"/>
+      <rect x="496" y="56" width="11" height="11" rx="2.5"/><rect x="528" y="70" width="11" height="11" rx="2.5"/>
+      <rect x="560" y="14" width="11" height="11" rx="2.5"/><rect x="592" y="42" width="11" height="11" rx="2.5"/>
+      <rect x="624" y="70" width="11" height="11" rx="2.5"/><rect x="656" y="0" width="11" height="11" rx="2.5"/>
+      <rect x="688" y="28" width="11" height="11" rx="2.5"/><rect x="720" y="56" width="11" height="11" rx="2.5"/>
+      <rect x="752" y="70" width="11" height="11" rx="2.5"/><rect x="784" y="14" width="11" height="11" rx="2.5"/>
+      <rect x="816" y="42" width="11" height="11" rx="2.5"/>
+    </g>
+
+    <!-- Animated Snake Crawling Through The Grid -->
+    <!-- Snake Body Segments -->
+    <g fill="#fbbf24" filter="url(#sglow)">
+      <!-- Head -->
+      <rect width="11" height="11" rx="3.5" fill="#fef08a">
+        <animateMotion path="M 16,14 L 32,14 L 48,14 L 48,28 L 64,28 L 80,28 L 80,42 L 112,42 L 144,42 L 144,28 L 176,28 L 208,28 L 208,56 L 240,56 L 272,56 L 304,56 L 336,56 L 368,56 L 400,56 L 432,56 L 464,56 L 496,56 L 528,56 L 560,56 L 592,56 L 624,56 L 656,56 L 688,56 L 720,56 L 752,56 L 784,56 L 816,56 L 816,28 L 784,28 L 752,28 L 720,28 L 688,28 L 656,28 L 624,28 L 592,28 L 560,28 L 528,28 L 496,28 L 464,28 L 432,28 L 400,28 L 368,28 L 336,28 L 304,28 L 272,28 L 240,28 L 208,28 L 176,28 L 144,28 L 112,28 L 80,28 L 48,28 L 16,28 Z" dur="12s" repeatCount="indefinite"/>
+      </rect>
+      <!-- Body 1 -->
+      <rect width="11" height="11" rx="3" fill="#fde047">
+        <animateMotion path="M 16,14 L 32,14 L 48,14 L 48,28 L 64,28 L 80,28 L 80,42 L 112,42 L 144,42 L 144,28 L 176,28 L 208,28 L 208,56 L 240,56 L 272,56 L 304,56 L 336,56 L 368,56 L 400,56 L 432,56 L 464,56 L 496,56 L 528,56 L 560,56 L 592,56 L 624,56 L 656,56 L 688,56 L 720,56 L 752,56 L 784,56 L 816,56 L 816,28 L 784,28 L 752,28 L 720,28 L 688,28 L 656,28 L 624,28 L 592,28 L 560,28 L 528,28 L 496,28 L 464,28 L 432,28 L 400,28 L 368,28 L 336,28 L 304,28 L 272,28 L 240,28 L 208,28 L 176,28 L 144,28 L 112,28 L 80,28 L 48,28 L 16,28 Z" dur="12s" begin="-0.15s" repeatCount="indefinite"/>
+      </rect>
+      <!-- Body 2 -->
+      <rect width="11" height="11" rx="3" fill="#fbbf24">
+        <animateMotion path="M 16,14 L 32,14 L 48,14 L 48,28 L 64,28 L 80,28 L 80,42 L 112,42 L 144,42 L 144,28 L 176,28 L 208,28 L 208,56 L 240,56 L 272,56 L 304,56 L 336,56 L 368,56 L 400,56 L 432,56 L 464,56 L 496,56 L 528,56 L 560,56 L 592,56 L 624,56 L 656,56 L 688,56 L 720,56 L 752,56 L 784,56 L 816,56 L 816,28 L 784,28 L 752,28 L 720,28 L 688,28 L 656,28 L 624,28 L 592,28 L 560,28 L 528,28 L 496,28 L 464,28 L 432,28 L 400,28 L 368,28 L 336,28 L 304,28 L 272,28 L 240,28 L 208,28 L 176,28 L 144,28 L 112,28 L 80,28 L 48,28 L 16,28 Z" dur="12s" begin="-0.30s" repeatCount="indefinite"/>
+      </rect>
+      <!-- Body 3 -->
+      <rect width="11" height="11" rx="3" fill="#f59e0b">
+        <animateMotion path="M 16,14 L 32,14 L 48,14 L 48,28 L 64,28 L 80,28 L 80,42 L 112,42 L 144,42 L 144,28 L 176,28 L 208,28 L 208,56 L 240,56 L 272,56 L 304,56 L 336,56 L 368,56 L 400,56 L 432,56 L 464,56 L 496,56 L 528,56 L 560,56 L 592,56 L 624,56 L 656,56 L 688,56 L 720,56 L 752,56 L 784,56 L 816,56 L 816,28 L 784,28 L 752,28 L 720,28 L 688,28 L 656,28 L 624,28 L 592,28 L 560,28 L 528,28 L 496,28 L 464,28 L 432,28 L 400,28 L 368,28 L 336,28 L 304,28 L 272,28 L 240,28 L 208,28 L 176,28 L 144,28 L 112,28 L 80,28 L 48,28 L 16,28 Z" dur="12s" begin="-0.45s" repeatCount="indefinite"/>
+      </rect>
+      <!-- Tail -->
+      <rect width="11" height="11" rx="3" fill="#ea580c">
+        <animateMotion path="M 16,14 L 32,14 L 48,14 L 48,28 L 64,28 L 80,28 L 80,42 L 112,42 L 144,42 L 144,28 L 176,28 L 208,28 L 208,56 L 240,56 L 272,56 L 304,56 L 336,56 L 368,56 L 400,56 L 432,56 L 464,56 L 496,56 L 528,56 L 560,56 L 592,56 L 624,56 L 656,56 L 688,56 L 720,56 L 752,56 L 784,56 L 816,56 L 816,28 L 784,28 L 752,28 L 720,28 L 688,28 L 656,28 L 624,28 L 592,28 L 560,28 L 528,28 L 496,28 L 464,28 L 432,28 L 400,28 L 368,28 L 336,28 L 304,28 L 272,28 L 240,28 L 208,28 L 176,28 L 144,28 L 112,28 L 80,28 L 48,28 L 16,28 Z" dur="12s" begin="-0.60s" repeatCount="indefinite"/>
+      </rect>
+    </g>
+  </g>
+</svg>
