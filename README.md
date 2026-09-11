@@ -29,7 +29,6 @@
 - 💡 <b><code>Specialization</code></b> ➔ <b><code>Enterprise Full-Stack</code></b> · <b><code>Agentic AI</code></b> · <b><code>Distributed Systems</code></b>
 - 💬 <b><code>Tech Focus</code></b> ➔ <b><code>React</code></b> · <b><code>Next.js</code></b> · <b><code>Node.js</code></b> · <b><code>Python</code></b> · <b><code>PostgreSQL</code></b> · <b><code>Docker</code></b> · <b><code>GenAI</code></b>
 - 🚀 <b><code>Engineering Mission</code></b> ➔ <b><code>Architecting High-Concurrency Systems &amp; Production-Grade AI</code></b>
-- 🌐 <b><code>Web Presence</code></b> ➔ <a href="https://portfolio-build-by-vaishnav.vercel.app/" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/badge/Live_Portfolio-Explore_Site_↗-D97706?style=flat-square&logo=googlechrome&logoColor=white" alt="Portfolio"/></a>
 
 <br/>
 
