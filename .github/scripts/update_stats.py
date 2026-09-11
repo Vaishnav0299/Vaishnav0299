@@ -440,15 +440,12 @@ def main():
     workspace_root = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", ".."))
     
     stats_paths = [
-        os.path.join(workspace_root, "stats.svg"),
         os.path.join(workspace_root, "assets", "stats.svg")
     ]
     langs_paths = [
-        os.path.join(workspace_root, "langs.svg"),
         os.path.join(workspace_root, "assets", "langs.svg")
     ]
     activity_paths = [
-        os.path.join(workspace_root, "activity.svg"),
         os.path.join(workspace_root, "assets", "activity.svg")
     ]
 
