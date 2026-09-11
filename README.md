@@ -188,14 +188,6 @@
 <!-- 📈 Accurate Contribution Activity Graph (self-hosted, immune to 402 errors) -->
 <img src="./assets/activity.svg" alt="Contribution Activity Graph" width="100%"/>
 
-<br/><br/>
-
-<!-- 🐍 Contribution Snake (stored locally in assets/snake.svg) -->
-
-## 🐍 <b><code>Contribution Velocity</code></b>
-
-<img src="./assets/snake.svg" alt="Contribution snake" width="100%"/>
-
 </div>
 
 <br/>
