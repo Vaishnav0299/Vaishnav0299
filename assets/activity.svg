@@ -1,0 +1,60 @@
+<svg width="880" height="240" viewBox="0 0 880 240" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="act_bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1c140e"/>
+      <stop offset="100%" stop-color="#0c0a09"/>
+    </linearGradient>
+    <linearGradient id="act_area" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f59e0b" stop-opacity="0.38"/>
+      <stop offset="100%" stop-color="#f59e0b" stop-opacity="0.0"/>
+    </linearGradient>
+    <filter id="act_glow">
+      <feGaussianBlur stdDeviation="3" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <rect width="880" height="240" rx="14" fill="url(#act_bg)" stroke="#d97706" stroke-opacity="0.45"/>
+  <text x="24" y="32" font-family="'Segoe UI', Arial, sans-serif" font-size="15" font-weight="700" fill="#fbbf24">📈 Contribution Activity Velocity (864 Total Contributions)</text>
+  <text x="856" y="32" text-anchor="end" font-family="'Segoe UI', Arial, sans-serif" font-size="12" fill="#d97706">2025 – 2026</text>
+  <!-- Horizontal Gridlines -->
+  <line x1="55" y1="55" x2="825" y2="55" stroke="#291c10" stroke-dasharray="4"/>
+  <line x1="55" y1="125.0" x2="825" y2="125.0" stroke="#291c10" stroke-dasharray="4"/>
+  <line x1="55" y1="195" x2="825" y2="195" stroke="#451a03" stroke-width="1.5"/>
+  <!-- Area Fill -->
+  <path d="M 55.0,195.0 C 87.1,195.0 87.1,195.0 119.2,195.0 C 151.2,195.0 151.2,195.0 183.3,195.0 C 215.4,195.0 215.4,195.0 247.5,195.0 C 279.6,195.0 279.6,193.2 311.7,193.2 C 343.8,193.2 343.8,191.3 375.8,191.3 C 407.9,191.3 407.9,195.0 440.0,195.0 C 472.1,195.0 472.1,176.6 504.2,176.6 C 536.2,176.6 536.2,163.0 568.3,163.0 C 600.4,163.0 600.4,142.1 632.5,142.1 C 664.6,142.1 664.6,76.0 696.7,76.0 C 728.8,76.0 728.8,141.4 760.8,141.4 C 792.9,141.4 792.9,158.6 825.0,158.6 L 825.0,195.0 L 55.0,195.0 Z" fill="url(#act_area)"/>
+  <!-- Line Stroke -->
+  <path d="M 55.0,195.0 C 87.1,195.0 87.1,195.0 119.2,195.0 C 151.2,195.0 151.2,195.0 183.3,195.0 C 215.4,195.0 215.4,195.0 247.5,195.0 C 279.6,195.0 279.6,193.2 311.7,193.2 C 343.8,193.2 343.8,191.3 375.8,191.3 C 407.9,191.3 407.9,195.0 440.0,195.0 C 472.1,195.0 472.1,176.6 504.2,176.6 C 536.2,176.6 536.2,163.0 568.3,163.0 C 600.4,163.0 600.4,142.1 632.5,142.1 C 664.6,142.1 664.6,76.0 696.7,76.0 C 728.8,76.0 728.8,141.4 760.8,141.4 C 792.9,141.4 792.9,158.6 825.0,158.6" fill="none" stroke="#fbbf24" stroke-width="3" filter="url(#act_glow)"/>
+  <!-- Data Points and Month Labels -->
+  <circle cx="55.0" cy="195.0" r="4" fill="#ea580c" stroke="#fbbf24" stroke-width="2"/>
+  <text x="55.0" y="215" text-anchor="middle" font-family="'Segoe UI', sans-serif" font-size="11" fill="#a8a29e">Sep</text>
+  <circle cx="119.2" cy="195.0" r="4" fill="#ea580c" stroke="#fbbf24" stroke-width="2"/>
+  <text x="119.2" y="215" text-anchor="middle" font-family="'Segoe UI', sans-serif" font-size="11" fill="#a8a29e">Oct</text>
+  <circle cx="183.3" cy="195.0" r="4" fill="#ea580c" stroke="#fbbf24" stroke-width="2"/>
+  <text x="183.3" y="215" text-anchor="middle" font-family="'Segoe UI', sans-serif" font-size="11" fill="#a8a29e">Nov</text>
+  <circle cx="247.5" cy="195.0" r="4" fill="#ea580c" stroke="#fbbf24" stroke-width="2"/>
+  <text x="247.5" y="215" text-anchor="middle" font-family="'Segoe UI', sans-serif" font-size="11" fill="#a8a29e">Dec</text>
+  <circle cx="311.7" cy="193.2" r="4" fill="#ea580c" stroke="#fbbf24" stroke-width="2"/>
+  <text x="311.7" y="215" text-anchor="middle" font-family="'Segoe UI', sans-serif" font-size="11" fill="#a8a29e">Jan</text>
+  <circle cx="375.8" cy="191.3" r="4" fill="#ea580c" stroke="#fbbf24" stroke-width="2"/>
+  <text x="375.8" y="215" text-anchor="middle" font-family="'Segoe UI', sans-serif" font-size="11" fill="#a8a29e">Feb</text>
+  <circle cx="440.0" cy="195.0" r="4" fill="#ea580c" stroke="#fbbf24" stroke-width="2"/>
+  <text x="440.0" y="215" text-anchor="middle" font-family="'Segoe UI', sans-serif" font-size="11" fill="#a8a29e">Mar</text>
+  <circle cx="504.2" cy="176.6" r="4" fill="#ea580c" stroke="#fbbf24" stroke-width="2"/>
+  <text x="504.2" y="215" text-anchor="middle" font-family="'Segoe UI', sans-serif" font-size="11" fill="#a8a29e">Apr</text>
+  <text x="504.2" y="167.6" text-anchor="middle" font-family="'Fira Code', monospace" font-size="10" font-weight="700" fill="#fbbf24">50</text>
+  <circle cx="568.3" cy="163.0" r="4" fill="#ea580c" stroke="#fbbf24" stroke-width="2"/>
+  <text x="568.3" y="215" text-anchor="middle" font-family="'Segoe UI', sans-serif" font-size="11" fill="#a8a29e">May</text>
+  <text x="568.3" y="154.0" text-anchor="middle" font-family="'Fira Code', monospace" font-size="10" font-weight="700" fill="#fbbf24">87</text>
+  <circle cx="632.5" cy="142.1" r="4" fill="#ea580c" stroke="#fbbf24" stroke-width="2"/>
+  <text x="632.5" y="215" text-anchor="middle" font-family="'Segoe UI', sans-serif" font-size="11" fill="#a8a29e">Jun</text>
+  <text x="632.5" y="133.1" text-anchor="middle" font-family="'Fira Code', monospace" font-size="10" font-weight="700" fill="#fbbf24">144</text>
+  <circle cx="696.7" cy="76.0" r="4" fill="#ea580c" stroke="#fbbf24" stroke-width="2"/>
+  <text x="696.7" y="215" text-anchor="middle" font-family="'Segoe UI', sans-serif" font-size="11" fill="#a8a29e">Jul</text>
+  <text x="696.7" y="67.0" text-anchor="middle" font-family="'Fira Code', monospace" font-size="10" font-weight="700" fill="#fbbf24">324</text>
+  <circle cx="760.8" cy="141.4" r="4" fill="#ea580c" stroke="#fbbf24" stroke-width="2"/>
+  <text x="760.8" y="215" text-anchor="middle" font-family="'Segoe UI', sans-serif" font-size="11" fill="#a8a29e">Aug</text>
+  <text x="760.8" y="132.4" text-anchor="middle" font-family="'Fira Code', monospace" font-size="10" font-weight="700" fill="#fbbf24">146</text>
+  <circle cx="825.0" cy="158.6" r="4" fill="#ea580c" stroke="#fbbf24" stroke-width="2"/>
+  <text x="825.0" y="215" text-anchor="middle" font-family="'Segoe UI', sans-serif" font-size="11" fill="#a8a29e">Sep</text>
+  <text x="825.0" y="149.6" text-anchor="middle" font-family="'Fira Code', monospace" font-size="10" font-weight="700" fill="#fbbf24">99</text>
+</svg>

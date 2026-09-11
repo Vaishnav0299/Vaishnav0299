@@ -186,8 +186,8 @@
 
 <br/>
 
-<!-- 📈 Contribution Activity Graph in molten gold & amber -->
-<img src="https://github-readme-activity-graph.vercel.app/graph?username=Vaishnav0299&bg_color=0c0a09&color=f59e0b&line=fbbf24&point=ea580c&area=true&area_color=451a03&hide_border=true&custom_title=Contribution%20Activity%20⚡" alt="Contribution graph" width="95%"/>
+<!-- 📈 Accurate Contribution Activity Graph (self-hosted, immune to 402 errors) -->
+<img src="./assets/activity.svg" alt="Contribution Activity Graph" width="100%"/>
 
 <br/><br/>
 
