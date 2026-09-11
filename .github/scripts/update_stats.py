@@ -218,7 +218,7 @@ def generate_langs_svg(langs, out_paths):
         top_langs = [("TypeScript", 85.8), ("JavaScript", 12.3), ("CSS", 1.4), ("Jupyter Notebook", 0.3), ("Python", 0.2)]
     
     max_pct = max(p for _, p in top_langs) if top_langs else 100
-    scale = 160.0 / max_pct if max_pct > 0 else 1.6
+    scale = 155.0 / max_pct if max_pct > 0 else 1.55
 
     rows_svg = []
     y_name = 62
@@ -233,8 +233,17 @@ def generate_langs_svg(langs, out_paths):
             bar_width = 8
         pct_str = f"{pct:.1f}%" if pct < 10 else f"{int(round(pct))}%"
 
-        row = f"""    <text x="22" y="{y_name}">{name}</text>
-    <rect x="105" y="{y_bar}" width="0" height="11" rx="5.5" fill="{color}"><animate attributeName="width" values="0;{bar_width}" begin="{begin_time:.2f}s" dur="1s" fill="freeze"/></rect>
+        # Truncate long language names if length exceeds 10 characters
+        display_name = name
+        if len(display_name) > 10:
+            parts = display_name.split()
+            if len(parts) > 1 and len(parts[0]) <= 10:
+                display_name = parts[0] + "..."
+            else:
+                display_name = display_name[:9].rstrip() + "..."
+
+        row = f"""    <text x="22" y="{y_name}">{display_name}</text>
+    <rect x="110" y="{y_bar}" width="0" height="11" rx="5.5" fill="{color}"><animate attributeName="width" values="0;{bar_width}" begin="{begin_time:.2f}s" dur="1s" fill="freeze"/></rect>
     <text x="338" y="{y_name}" fill="#fbbf24" font-weight="700" text-anchor="end">{pct_str}</text>"""
         rows_svg.append(row)
         y_name += 26
@@ -457,3 +466,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
