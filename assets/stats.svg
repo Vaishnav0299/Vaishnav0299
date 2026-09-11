@@ -16,19 +16,19 @@
   <!-- rows: edit the numbers on the right to update -->
   <g font-family="'Segoe UI', Arial, sans-serif" font-size="14" fill="#d6d3d1">
     <g opacity="0"><animate attributeName="opacity" values="0;1" begin="0.2s" dur="0.4s" fill="freeze"/>
-      <text x="24" y="68">⭐ Total Stars Earned:</text><text x="300" y="68" font-weight="700" fill="#fbbf24">30+</text>
+      <text x="24" y="68">⭐ Total Stars Earned:</text><text x="300" y="68" font-weight="700" fill="#fbbf24">30</text>
     </g>
     <g opacity="0"><animate attributeName="opacity" values="0;1" begin="0.4s" dur="0.4s" fill="freeze"/>
-      <text x="24" y="94">🕒 Total Commits:</text><text x="300" y="94" font-weight="700" fill="#fbbf24">864+</text>
+      <text x="24" y="94">🕒 Total Commits:</text><text x="300" y="94" font-weight="700" fill="#fbbf24">864</text>
     </g>
     <g opacity="0"><animate attributeName="opacity" values="0;1" begin="0.6s" dur="0.4s" fill="freeze"/>
-      <text x="24" y="120">🔀 Total PRs:</text><text x="300" y="120" font-weight="700" fill="#fbbf24">50+</text>
+      <text x="24" y="120">🔀 Total PRs:</text><text x="300" y="120" font-weight="700" fill="#fbbf24">50</text>
     </g>
     <g opacity="0"><animate attributeName="opacity" values="0;1" begin="0.8s" dur="0.4s" fill="freeze"/>
-      <text x="24" y="146">🐛 Total Issues:</text><text x="300" y="146" font-weight="700" fill="#fbbf24">20+</text>
+      <text x="24" y="146">🐛 Total Issues:</text><text x="300" y="146" font-weight="700" fill="#fbbf24">20</text>
     </g>
     <g opacity="0"><animate attributeName="opacity" values="0;1" begin="1.0s" dur="0.4s" fill="freeze"/>
-      <text x="24" y="172">📦 Public Repos:</text><text x="300" y="172" font-weight="700" fill="#fbbf24">40+</text>
+      <text x="24" y="172">📦 Public Repos:</text><text x="300" y="172" font-weight="700" fill="#fbbf24">40</text>
     </g>
   </g>
 
@@ -39,6 +39,6 @@
             stroke-dasharray="264" stroke-dashoffset="264" transform="rotate(-90)" filter="url(#sglow)">
       <animate attributeName="stroke-dashoffset" values="264;40" begin="0.3s" dur="1.4s" fill="freeze" calcMode="spline" keySplines="0.25 0.1 0.25 1"/>
     </circle>
-    <text y="12" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif" font-size="32" font-weight="800" fill="#fbbf24">A+</text>
+    <text y="12" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif" font-size="32" font-weight="800" fill="#fbbf24">A</text>
   </g>
 </svg>
