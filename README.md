@@ -102,26 +102,6 @@
 
 ---
 
-# 🐍 Watch the Snake Eat My Contributions
-
-<div align="center">
-
-![snake gif](https://raw.githubusercontent.com/Vaishnav0299/Vaishnav0299/output/github-contribution-grid-snake.svg)
-
-</div>
-
----
-
-# 🏆 GitHub Trophies
-
-<div align="center">
-
-<img src="https://github-profile-trophy.vercel.app/?username=Vaishnav0299&theme=flat&no-frame=true&no-bg=true&margin-w=5" />
-
-</div>
-
----
-
 ### ⚡ Target Execution Matrix
 
 ```text
