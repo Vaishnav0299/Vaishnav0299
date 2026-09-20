@@ -11,21 +11,21 @@
   <g font-family="'Segoe UI', Arial, sans-serif" font-size="13" fill="#e7e5e4">
     <text x="22" y="62">TypeScript</text>
     <rect x="110" y="52" width="0" height="11" rx="5.5" fill="#f59e0b"><animate attributeName="width" values="0;155" begin="0.20s" dur="1s" fill="freeze"/></rect>
-    <text x="338" y="62" fill="#fbbf24" font-weight="700" text-anchor="end">86%</text>
+    <text x="338" y="62" fill="#fbbf24" font-weight="700" text-anchor="end">85%</text>
 
     <text x="22" y="88">JavaScript</text>
-    <rect x="110" y="78" width="0" height="11" rx="5.5" fill="#fbbf24"><animate attributeName="width" values="0;23" begin="0.35s" dur="1s" fill="freeze"/></rect>
-    <text x="338" y="88" fill="#fbbf24" font-weight="700" text-anchor="end">12%</text>
+    <rect x="110" y="78" width="0" height="11" rx="5.5" fill="#fbbf24"><animate attributeName="width" values="0;24" begin="0.35s" dur="1s" fill="freeze"/></rect>
+    <text x="338" y="88" fill="#fbbf24" font-weight="700" text-anchor="end">13%</text>
 
     <text x="22" y="114">CSS</text>
     <rect x="110" y="104" width="0" height="11" rx="5.5" fill="#f97316"><animate attributeName="width" values="0;8" begin="0.50s" dur="1s" fill="freeze"/></rect>
-    <text x="338" y="114" fill="#fbbf24" font-weight="700" text-anchor="end">1.1%</text>
+    <text x="338" y="114" fill="#fbbf24" font-weight="700" text-anchor="end">1.2%</text>
 
-    <text x="22" y="140">Jupyter...</text>
+    <text x="22" y="140">Python</text>
     <rect x="110" y="130" width="0" height="11" rx="5.5" fill="#ea580c"><animate attributeName="width" values="0;8" begin="0.65s" dur="1s" fill="freeze"/></rect>
-    <text x="338" y="140" fill="#fbbf24" font-weight="700" text-anchor="end">0.1%</text>
+    <text x="338" y="140" fill="#fbbf24" font-weight="700" text-anchor="end">0.2%</text>
 
-    <text x="22" y="166">Python</text>
+    <text x="22" y="166">Jupyter...</text>
     <rect x="110" y="156" width="0" height="11" rx="5.5" fill="#d97706"><animate attributeName="width" values="0;8" begin="0.80s" dur="1s" fill="freeze"/></rect>
     <text x="338" y="166" fill="#fbbf24" font-weight="700" text-anchor="end">0.1%</text>
   </g>
