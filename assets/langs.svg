@@ -19,13 +19,13 @@
 
     <text x="22" y="114">CSS</text>
     <rect x="110" y="104" width="0" height="11" rx="5.5" fill="#f97316"><animate attributeName="width" values="0;8" begin="0.50s" dur="1s" fill="freeze"/></rect>
-    <text x="338" y="114" fill="#fbbf24" font-weight="700" text-anchor="end">1.2%</text>
+    <text x="338" y="114" fill="#fbbf24" font-weight="700" text-anchor="end">1.1%</text>
 
     <text x="22" y="140">Python</text>
     <rect x="110" y="130" width="0" height="11" rx="5.5" fill="#ea580c"><animate attributeName="width" values="0;8" begin="0.65s" dur="1s" fill="freeze"/></rect>
     <text x="338" y="140" fill="#fbbf24" font-weight="700" text-anchor="end">0.2%</text>
 
-    <text x="22" y="166">Jupyter...</text>
+    <text x="22" y="166">PLpgSQL</text>
     <rect x="110" y="156" width="0" height="11" rx="5.5" fill="#d97706"><animate attributeName="width" values="0;8" begin="0.80s" dur="1s" fill="freeze"/></rect>
     <text x="338" y="166" fill="#fbbf24" font-weight="700" text-anchor="end">0.1%</text>
   </g>
