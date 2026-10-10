@@ -14,7 +14,7 @@
     <text x="338" y="62" fill="#fbbf24" font-weight="700" text-anchor="end">87%</text>
 
     <text x="22" y="88">JavaScript</text>
-    <rect x="110" y="78" width="0" height="11" rx="5.5" fill="#fbbf24"><animate attributeName="width" values="0;20" begin="0.35s" dur="1s" fill="freeze"/></rect>
+    <rect x="110" y="78" width="0" height="11" rx="5.5" fill="#fbbf24"><animate attributeName="width" values="0;19" begin="0.35s" dur="1s" fill="freeze"/></rect>
     <text x="338" y="88" fill="#fbbf24" font-weight="700" text-anchor="end">11%</text>
 
     <text x="22" y="114">CSS</text>
