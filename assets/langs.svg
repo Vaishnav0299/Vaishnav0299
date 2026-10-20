@@ -14,12 +14,12 @@
     <text x="338" y="62" fill="#fbbf24" font-weight="700" text-anchor="end">85%</text>
 
     <text x="22" y="88">JavaScript</text>
-    <rect x="110" y="78" width="0" height="11" rx="5.5" fill="#fbbf24"><animate attributeName="width" values="0;24" begin="0.35s" dur="1s" fill="freeze"/></rect>
+    <rect x="110" y="78" width="0" height="11" rx="5.5" fill="#fbbf24"><animate attributeName="width" values="0;23" begin="0.35s" dur="1s" fill="freeze"/></rect>
     <text x="338" y="88" fill="#fbbf24" font-weight="700" text-anchor="end">13%</text>
 
     <text x="22" y="114">CSS</text>
     <rect x="110" y="104" width="0" height="11" rx="5.5" fill="#f97316"><animate attributeName="width" values="0;8" begin="0.50s" dur="1s" fill="freeze"/></rect>
-    <text x="338" y="114" fill="#fbbf24" font-weight="700" text-anchor="end">1.1%</text>
+    <text x="338" y="114" fill="#fbbf24" font-weight="700" text-anchor="end">1.0%</text>
 
     <text x="22" y="140">PLpgSQL</text>
     <rect x="110" y="130" width="0" height="11" rx="5.5" fill="#ea580c"><animate attributeName="width" values="0;8" begin="0.65s" dur="1s" fill="freeze"/></rect>
