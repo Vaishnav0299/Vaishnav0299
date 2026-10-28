@@ -11,7 +11,7 @@
   <g font-family="'Segoe UI', Arial, sans-serif" font-size="13" fill="#e7e5e4">
     <text x="22" y="62">TypeScript</text>
     <rect x="110" y="52" width="0" height="11" rx="5.5" fill="#f59e0b"><animate attributeName="width" values="0;155" begin="0.20s" dur="1s" fill="freeze"/></rect>
-    <text x="338" y="62" fill="#fbbf24" font-weight="700" text-anchor="end">82%</text>
+    <text x="338" y="62" fill="#fbbf24" font-weight="700" text-anchor="end">83%</text>
 
     <text x="22" y="88">JavaScript</text>
     <rect x="110" y="78" width="0" height="11" rx="5.5" fill="#fbbf24"><animate attributeName="width" values="0;27" begin="0.35s" dur="1s" fill="freeze"/></rect>
